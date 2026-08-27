@@ -1,0 +1,6 @@
+# Raw, unoptimized source photos (hundreds of MB) — not needed to serve the
+# site. The resized copies actually used by index.html live in assets/.
+/website/
+
+# Local Claude Code dev-server config
+/.claude/

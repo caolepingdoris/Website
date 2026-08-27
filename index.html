@@ -1,0 +1,1748 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>doris.leping.cao</title>
+<meta name="description" content="Doris (Leping) Cao — Boston-based photographer, filmmaker and multimedia artist. Direction, production, lighting, 16mm and installation.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a0a0c">
+<meta property="og:title" content="doris.leping.cao">
+<meta property="og:description" content="A multimedia artist and producer dedicated to the space where art, technology, and cultural storytelling meet.">
+<meta property="og:image" content="assets/thumb/hero.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;0,6..96,900;1,6..96,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style>
+/* ============================================================
+   DORIS CAO — portfolio
+   One committed world: a darkened screening room.
+   Every colour is painted explicitly, so the page never borrows
+   a background from whatever is hosting it.
+   ============================================================ */
+:root {
+  --ink:      #08080a;
+  --ink-2:    #101014;
+  --ink-3:    #17171c;
+  --paper:    #f4f1eb;
+  --muted:    #948f86;
+  --dim:      #5f5c55;
+  --lamp:     #e8a33d;          /* 3200K tungsten — the one accent */
+  --line:     rgba(244,241,235,.15);
+  --line-soft:rgba(244,241,235,.065);
+
+  --f-display:"Bodoni Moda","Didot","Times New Roman",serif;
+  --f-body:   "Archivo","Helvetica Neue",Arial,sans-serif;
+  --f-mono:   "IBM Plex Mono",ui-monospace,Consolas,monospace;
+
+  --gutter: clamp(1.1rem,4.5vw,5.5rem);
+  --nav-h:  56px;
+  --ease:   cubic-bezier(.22,.68,.28,1);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--f-body);
+  font-size: clamp(.95rem,.9rem + .2vw,1.05rem);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img, video { display: block; max-width: 100%; }
+[hidden] { display: none !important; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--lamp); outline-offset: 3px; }
+::selection { background: var(--lamp); color: var(--ink); }
+
+.wrap { padding-inline: var(--gutter); }
+.skip { position: absolute; left: -9999px; top: 0; z-index: 100;
+        background: var(--lamp); color: var(--ink); padding: .6rem 1rem; }
+.skip:focus { left: .5rem; top: .5rem; }
+
+/* ---- film grain ----------------------------------------------
+   Deliberately plain: no mix-blend-mode and no oversized layer.
+   Both push the whole page into one composited group, which makes
+   the sticky nav mis-paint during scroll.
+   ---------------------------------------------------------------- */
+.grain {
+  position: fixed; inset: 0; z-index: 30; pointer-events: none;
+  opacity: .05;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/></svg>");
+}
+@media (prefers-reduced-motion: no-preference) {
+  .grain { animation: grain 1.1s steps(4) infinite; }
+  @keyframes grain {
+    0%   { background-position:   0px   0px }
+    25%  { background-position: -37px  19px }
+    50%  { background-position:  23px -41px }
+    75%  { background-position: -19px -13px }
+    100% { background-position:   0px   0px }
+  }
+}
+
+/* ---- scroll progress ---- */
+.progress {
+  position: fixed; top: 0; left: 0; height: 2px; z-index: 50;
+  width: 100%; transform: scaleX(0); transform-origin: 0 50%;
+  background: linear-gradient(90deg, var(--lamp), #f6d9a4);
+  will-change: transform;
+}
+
+/* ---------- shared type ---------- */
+.label {
+  font-family: var(--f-mono); font-size: .68rem; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--muted); margin: 0;
+}
+.label.lamp { color: var(--lamp); }
+
+.section-title {
+  font-family: var(--f-display); font-weight: 400;
+  font-size: clamp(2.4rem,6vw,5rem); line-height: .94;
+  letter-spacing: -.02em; margin: .5rem 0 0; text-wrap: balance;
+}
+.lede { max-width: 58ch; color: var(--muted); margin: 1.1rem 0 0; }
+
+.head { padding-block: clamp(4rem,9vw,8rem) clamp(1.5rem,3.5vw,3rem); }
+.head .marker {
+  display: flex; align-items: center; gap: 1rem;
+  padding-bottom: .9rem; margin-bottom: .2rem;
+  border-bottom: 1px solid var(--line-soft);
+}
+.head .marker .no {
+  font-family: var(--f-mono); font-size: .68rem; letter-spacing: .2em;
+  color: var(--lamp);
+}
+.head .marker .nm {
+  font-family: var(--f-mono); font-size: .68rem; letter-spacing: .2em;
+  text-transform: uppercase; color: var(--muted);
+}
+.rule { border: 0; border-top: 1px solid var(--line-soft); margin: 0; }
+
+/* ---------- sub-heading used inside sections ---------- */
+.sub {
+  display: flex; align-items: baseline; gap: .5rem 1.1rem; flex-wrap: wrap;
+  padding: clamp(2.5rem,6vw,5rem) 0 1.1rem;
+}
+.sub h3 {
+  font-family: var(--f-display); font-weight: 400; margin: 0;
+  font-size: clamp(1.5rem,3vw,2.4rem); line-height: 1.05; letter-spacing: -.01em;
+}
+.sub .medium {
+  font-family: var(--f-mono); font-size: .66rem; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--lamp);
+}
+
+/* ============================================================
+   NAV
+   ============================================================ */
+.nav {
+  position: sticky; top: 0; z-index: 40; height: var(--nav-h);
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; padding-inline: var(--gutter);
+  background: rgba(8,8,10,.78);
+  backdrop-filter: blur(16px) saturate(1.2);
+  -webkit-backdrop-filter: blur(16px) saturate(1.2);
+  border-bottom: 1px solid var(--line-soft);
+}
+.nav .mark {
+  font-family: var(--f-display); font-weight: 700; font-size: .95rem;
+  letter-spacing: .06em; text-transform: uppercase; text-decoration: none;
+  white-space: nowrap;
+}
+.nav ul {
+  display: flex; gap: clamp(.7rem,2vw,1.8rem); list-style: none;
+  margin: 0; padding: 0; overflow-x: auto; scrollbar-width: none;
+}
+.nav ul::-webkit-scrollbar { display: none; }
+.nav a.n {
+  position: relative; font-family: var(--f-mono); font-size: .68rem;
+  letter-spacing: .14em; text-transform: uppercase; text-decoration: none;
+  color: var(--muted); white-space: nowrap; padding-block: .45rem;
+  transition: color .2s var(--ease);
+}
+.nav a.n::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px;
+  background: var(--lamp); transform: scaleX(0); transform-origin: 0 50%;
+  transition: transform .3s var(--ease);
+}
+.nav a.n:hover { color: var(--paper); }
+.nav a.n:hover::after, .nav a.n[aria-current="true"]::after { transform: scaleX(1); }
+.nav a.n[aria-current="true"] { color: var(--paper); }
+
+/* ============================================================
+   MASTHEAD
+   ============================================================ */
+.masthead { position: relative; overflow: hidden; }
+.masthead .plate {
+  position: relative; display: grid; gap: 2px;
+  grid-template-columns: 1fr;
+  height: clamp(60svh,72svh,84svh); overflow: hidden;
+}
+.masthead .plate img {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: saturate(.78) contrast(1.06) brightness(.72);
+  transform: scale(1.06);
+}
+/* the second frame (if present) drifts the other way, so a pair never reads as one photo */
+.masthead .plate img:nth-child(2) { object-position: 55% 50%; }
+@media (prefers-reduced-motion: no-preference) {
+  .masthead .plate img { animation: drift 26s var(--ease) infinite alternate; }
+  .masthead .plate img:nth-child(2) { animation-direction: alternate-reverse; }
+  @keyframes drift {
+    from { transform: scale(1.06) translate3d(0,0,0); }
+    to   { transform: scale(1.14) translate3d(-1.5%,-1.5%,0); }
+  }
+}
+.masthead .plate::after {
+  content: ""; position: absolute; inset: 0;
+  background:
+    radial-gradient(58% 68% at 50% 42%, transparent, rgba(8,8,10,.6) 100%),
+    linear-gradient(to bottom, rgba(8,8,10,.65), rgba(8,8,10,.1) 34%, var(--ink) 99%);
+}
+/* pointer-tracked key light */
+.keylight {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: radial-gradient(28rem 28rem at var(--lx,60%) var(--ly,38%),
+    rgba(232,163,61,.17), rgba(232,163,61,.05) 45%, transparent 70%);
+}
+.masthead .over {
+  position: absolute; inset: 0; z-index: 2;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: var(--gutter);
+}
+.masthead .over > * { max-width: 100%; }
+
+.wordmark {
+  font-family: var(--f-display); font-weight: 900; text-transform: uppercase;
+  font-size: clamp(2.9rem,13.5vw,12rem); line-height: .8; letter-spacing: -.045em;
+  margin: 0 0 .55rem;
+}
+.wordmark .b { display: block; }
+.wordmark .b:last-child { color: transparent; -webkit-text-stroke: 1.5px var(--paper); }
+@supports not (-webkit-text-stroke: 1px red) { .wordmark .b:last-child { color: var(--paper); } }
+
+.roles { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .35rem 1.5rem; }
+.roles a {
+  position: relative; font-family: var(--f-display);
+  font-size: clamp(1rem,2.4vw,1.65rem); text-decoration: none;
+  padding-bottom: .12rem; transition: color .25s var(--ease);
+}
+.roles a::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px;
+  background: currentColor; opacity: .3;
+  transition: opacity .25s var(--ease), background .25s var(--ease);
+}
+.roles a:hover { color: var(--lamp); }
+.roles a:hover::after { opacity: 1; }
+
+.scrollcue {
+  position: absolute; right: var(--gutter); bottom: 1.4rem; z-index: 3;
+  display: flex; flex-direction: column; align-items: center;
+  gap: .55rem; pointer-events: none;
+}
+.scrollcue span {
+  font-family: var(--f-mono); font-size: .58rem; letter-spacing: .24em;
+  text-transform: uppercase; color: var(--muted);
+}
+.scrollcue i { display: block; width: 1px; height: 34px; background: linear-gradient(var(--lamp), transparent); }
+@media (prefers-reduced-motion: no-preference) {
+  .scrollcue i { animation: cue 2.4s var(--ease) infinite; transform-origin: 0 0; }
+  @keyframes cue { 0%,100% { transform: scaleY(.35); opacity: .4 } 50% { transform: scaleY(1); opacity: 1 } }
+}
+@media (max-width: 1100px) { .scrollcue { display: none; } }
+
+.masthead-foot {
+  display: flex; flex-wrap: wrap; gap: 1rem 2.5rem; align-items: flex-end;
+  justify-content: space-between; padding: 1.8rem var(--gutter) 2.4rem;
+  border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft);
+}
+.standfirst {
+  font-family: var(--f-display); font-size: clamp(1.1rem,2.2vw,1.7rem);
+  line-height: 1.32; max-width: 36ch; margin: 0; text-wrap: balance;
+}
+.socials { display: flex; gap: .8rem; align-items: center; }
+.socials a {
+  display: inline-flex; width: 40px; height: 40px; align-items: center;
+  justify-content: center; border: 1px solid var(--line); border-radius: 50%;
+  transition: border-color .25s var(--ease), background .25s var(--ease),
+              color .25s var(--ease), transform .25s var(--ease);
+}
+.socials a:hover {
+  border-color: var(--lamp); background: var(--lamp); color: var(--ink);
+  transform: translateY(-2px);
+}
+.socials svg { width: 16px; height: 16px; fill: currentColor; }
+
+/* ============================================================
+   REEL
+   ============================================================ */
+/* ============================================================
+   ABOUT
+   ============================================================ */
+.about-grid {
+  display: grid; gap: clamp(1.5rem,4vw,4rem);
+  grid-template-columns: 1fr; align-items: start;
+  padding-bottom: clamp(3rem,7vw,6rem);
+}
+@media (min-width: 900px) { .about-grid { grid-template-columns: 1fr 1.15fr; } }
+.pull {
+  font-family: var(--f-display); font-size: clamp(1.35rem,2.7vw,2.15rem);
+  line-height: 1.26; margin: 0; text-wrap: balance;
+}
+.pull span { color: var(--lamp); font-style: italic; }
+.prose p { margin: 0 0 1.05em; max-width: 64ch; }
+.prose p:last-child { margin-bottom: 0; }
+.facts {
+  display: grid; gap: 1.6rem 2rem; grid-template-columns: 1fr 1fr;
+  padding: 1.5rem 0 clamp(3rem,7vw,6rem); border-top: 1px solid var(--line-soft);
+}
+@media (min-width: 760px) { .facts { grid-template-columns: repeat(4,1fr); } }
+.fact { display: flex; flex-direction: column; gap: .4rem; }
+.fact .label {
+  font-family: var(--f-mono); font-size: .64rem; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--muted);
+}
+.fact b { font-family: var(--f-display); font-weight: 400; font-size: clamp(.95rem,1.6vw,1.15rem); }
+
+/* ============================================================
+   PROJECTS
+   ============================================================ */
+.projects { display: grid; gap: clamp(3rem,7vw,6.5rem); padding-bottom: clamp(3rem,7vw,6rem); }
+.project { display: grid; gap: clamp(1.1rem,2.5vw,2.5rem); grid-template-columns: 1fr; }
+@media (min-width: 950px) {
+  .project { grid-template-columns: 1.55fr 1fr; align-items: center; }
+  /* flipped projects put the text first, so the wide column has to move with it */
+  .project.flip { grid-template-columns: 1fr 1.55fr; }
+  .project.flip .pj-media { order: 2; }
+}
+.pj-media { position: relative; background: var(--ink-2); overflow: hidden; }
+.pj-media > img { width: 100%; height: auto; transition: transform 1s var(--ease); }
+.project:hover .pj-media > img { transform: scale(1.025); }
+.pj-strip { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
+.pj-strip-2 { grid-template-columns: repeat(2,1fr); }
+.pj-strip .cell { margin: 0; aspect-ratio: 16 / 9; }
+.pj-strip-sq .cell { aspect-ratio: 1 / 1; }
+.pj-strip .cell img { width: 100%; height: 100%; object-fit: cover; }
+.pj-strip .cell figcaption { padding: 1.2rem .55rem .4rem; font-size: .55rem; }
+.pj-index {
+  font-family: var(--f-mono); font-size: .68rem; letter-spacing: .2em;
+  color: var(--dim); margin: 0 0 .8rem;
+}
+.pj-kicker { display: flex; gap: .9rem; align-items: baseline; flex-wrap: wrap; }
+.pj-title {
+  font-family: var(--f-display); font-size: clamp(1.7rem,3.6vw,2.9rem);
+  line-height: 1.02; margin: .35rem 0 .7rem; letter-spacing: -.015em;
+}
+.pj-body { color: var(--muted); max-width: 46ch; margin: 0 0 1.2rem; }
+.pj-meta { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line-soft); }
+.pj-meta li {
+  display: flex; gap: 1rem; justify-content: space-between;
+  padding: .55rem 0; border-bottom: 1px solid var(--line-soft); font-size: .85rem;
+}
+.pj-meta span:first-child {
+  font-family: var(--f-mono); font-size: .64rem; letter-spacing: .15em;
+  text-transform: uppercase; color: var(--dim); padding-top: .22rem;
+  white-space: nowrap;
+}
+.pj-meta span:last-child { text-align: right; }
+.watch {
+  display: inline-block; margin-top: 1.1rem; text-decoration: none;
+  font-family: var(--f-mono); font-size: .68rem; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--lamp);
+  border: 1px solid var(--line); border-radius: 999px; padding: .55rem 1.1rem;
+  transition: background .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease);
+}
+.watch:hover { background: var(--lamp); color: var(--ink); border-color: var(--lamp); }
+
+/* ============================================================
+   GALLERY
+   ============================================================ */
+.filters { display: flex; flex-wrap: wrap; gap: .45rem; margin: 1.8rem 0 2rem; }
+.chip {
+  font-family: var(--f-mono); font-size: .66rem; letter-spacing: .13em;
+  text-transform: uppercase; color: var(--muted); background: transparent;
+  border: 1px solid var(--line); border-radius: 999px;
+  padding: .45rem .9rem; cursor: pointer;
+  transition: color .2s var(--ease), border-color .2s var(--ease), background .2s var(--ease);
+}
+.chip:hover { color: var(--paper); border-color: var(--muted); }
+.chip[aria-pressed="true"] { color: var(--ink); background: var(--paper); border-color: var(--paper); }
+.chip .n { font-size: .58rem; opacity: .55; margin-left: .45rem; }
+
+.grid { column-gap: 12px; columns: 2; padding-bottom: clamp(2rem,5vw,4rem); }
+@media (min-width: 700px)  { .grid { columns: 3; } }
+@media (min-width: 1200px) { .grid { columns: 4; } }
+.grid.wide { columns: 1; }
+@media (min-width: 700px)  { .grid.wide { columns: 2; } }
+@media (min-width: 1300px) { .grid.wide { columns: 3; } }
+
+.cell {
+  break-inside: avoid; margin: 0 0 12px; position: relative; overflow: hidden;
+  background: var(--ink-2); cursor: zoom-in; border: 0; padding: 0;
+  width: 100%; display: block; color: inherit; text-align: left;
+}
+.cell img { width: 100%; height: auto; transition: opacity .35s, transform .8s var(--ease); }
+.cell::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  box-shadow: inset 0 0 0 1px var(--lamp); opacity: 0; transition: opacity .25s var(--ease);
+}
+.cell:hover img, .cell:focus-visible img { opacity: .9; transform: scale(1.04); }
+.cell:hover::after, .cell:focus-visible::after { opacity: .55; }
+.cell figcaption {
+  position: absolute; inset: auto 0 0 0; padding: 1.6rem .8rem .6rem;
+  font-family: var(--f-mono); font-size: .6rem; letter-spacing: .13em;
+  text-transform: uppercase;
+  background: linear-gradient(to top, rgba(8,8,10,.9), transparent);
+  opacity: 0; transform: translateY(6px);
+  transition: opacity .25s var(--ease), transform .25s var(--ease);
+}
+.cell:hover figcaption, .cell:focus-visible figcaption { opacity: 1; transform: none; }
+.cell[hidden] { display: none; }
+
+/* ============================================================
+   CREDITS
+   ============================================================ */
+.credits { border-top: 1px solid var(--line); }
+.credit {
+  display: grid; gap: .1rem 1.2rem; grid-template-columns: 1fr;
+  padding: .6rem 0; border-bottom: 1px solid var(--line-soft); align-items: baseline;
+  transition: background .25s var(--ease);
+}
+@media (min-width: 820px) { .credit { grid-template-columns: 4.5rem 1fr 11rem 9rem; gap: 1.2rem; } }
+.credit:hover { background: rgba(244,241,235,.022); }
+.credit[hidden] { display: none; }
+.credit .yr { font-family: var(--f-mono); font-size: .66rem; color: var(--dim); letter-spacing: .1em; }
+.credit .ti { font-family: var(--f-display); font-size: clamp(.98rem,1.5vw,1.12rem); line-height: 1.25; }
+.credit .ti em {
+  color: var(--muted); font-family: var(--f-body); font-size: .64rem; font-style: normal;
+  display: block; letter-spacing: .06em; text-transform: uppercase; margin-top: .12rem;
+}
+.credit .ro { font-family: var(--f-mono); font-size: .62rem; letter-spacing: .12em; text-transform: uppercase; color: var(--lamp); }
+.credit .di { font-size: .74rem; color: var(--muted); }
+@media (min-width: 820px) { .credit .di { text-align: right; } }
+.cred-pager {
+  display: flex; align-items: center; justify-content: center; gap: 1.1rem;
+  padding-top: 1.5rem;
+}
+.cred-pager button {
+  width: 2.15rem; height: 2.15rem; border-radius: 50%; border: 1px solid var(--line);
+  background: transparent; color: var(--paper); font-size: 1.05rem; line-height: 1;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: border-color .2s var(--ease), color .2s var(--ease);
+}
+.cred-pager button:hover:not(:disabled) { border-color: var(--lamp); color: var(--lamp); }
+.cred-pager button:disabled { opacity: .28; cursor: default; }
+.cred-pager .cred-page {
+  font-family: var(--f-mono); font-size: .66rem; letter-spacing: .16em; color: var(--muted);
+  min-width: 4.5em; text-align: center;
+}
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.contact { padding-block: clamp(4rem,9vw,8rem) clamp(2rem,5vw,4rem); border-top: 1px solid var(--line); }
+.big-link {
+  position: relative; font-family: var(--f-display);
+  font-size: clamp(1.4rem,4.6vw,3.4rem); text-decoration: none;
+  line-height: 1.1; display: inline-block; padding-bottom: .1rem;
+  transition: color .25s var(--ease); word-break: break-word;
+}
+.big-link::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px;
+  background: currentColor; opacity: .28; transition: opacity .25s var(--ease);
+}
+.big-link:hover { color: var(--lamp); }
+.big-link:hover::after { opacity: 1; }
+.contact-grid { display: grid; gap: 2.2rem clamp(2rem,5vw,4rem); grid-template-columns: 1fr; margin-top: 3rem; }
+@media (min-width: 760px) { .contact-grid { grid-template-columns: repeat(3,1fr); } }
+.contact-grid a {
+  display: block; text-decoration: none; border-bottom: 1px solid var(--line-soft);
+  padding: .55rem 0; transition: color .25s var(--ease), border-color .25s var(--ease), padding-left .25s var(--ease);
+}
+.contact-grid a:hover { color: var(--lamp); border-color: var(--lamp); padding-left: .4rem; }
+footer {
+  padding: 2rem var(--gutter) 3rem; border-top: 1px solid var(--line-soft);
+  display: flex; flex-wrap: wrap; gap: .5rem 2rem; justify-content: space-between;
+}
+
+/* ============================================================
+   LIGHTBOX
+   ============================================================ */
+.lb {
+  position: fixed; inset: 0; z-index: 90; display: flex;
+  background: #050506; padding: clamp(.5rem,2vw,2.5rem);
+  align-items: center; justify-content: center;
+  opacity: 0; visibility: hidden;
+  transition: opacity .3s var(--ease), visibility .3s;
+}
+.lb.on { opacity: 1; visibility: visible; }
+.lb img {
+  max-width: 100%; max-height: 82svh; object-fit: contain; margin: auto;
+  transform: scale(.985); transition: transform .35s var(--ease);
+}
+.lb.on img { transform: none; }
+.lb figcaption {
+  position: absolute; left: 0; right: 0; bottom: clamp(.7rem,2vw,1.6rem);
+  text-align: center; font-family: var(--f-mono); font-size: .64rem;
+  letter-spacing: .16em; text-transform: uppercase; color: var(--muted);
+}
+.lb button {
+  position: absolute; background: rgba(8,8,10,.6); border: 1px solid var(--line);
+  color: var(--paper); width: 46px; height: 46px; border-radius: 50%;
+  cursor: pointer; font-size: 1.15rem; line-height: 1;
+  display: flex; align-items: center; justify-content: center;
+  transition: border-color .2s var(--ease), background .2s var(--ease), color .2s var(--ease);
+}
+.lb button:hover { border-color: var(--lamp); background: var(--lamp); color: var(--ink); }
+.lb .x    { top: clamp(.7rem,2vw,1.6rem); right: clamp(.7rem,2vw,1.6rem); }
+.lb .prev { left: clamp(.4rem,1.5vw,1.4rem);  top: 50%; transform: translateY(-50%); }
+.lb .next { right: clamp(.4rem,1.5vw,1.4rem); top: 50%; transform: translateY(-50%); }
+
+/* ---------- reveal ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .rise { opacity: 0; transform: translateY(22px); transition: opacity .8s ease, transform .8s var(--ease); }
+  .rise.in { opacity: 1; transform: none; }
+}
+
+/* ============================================================
+   CAROUSEL — the installation work, paged instead of sprawling
+   ============================================================ */
+.carousel { position: relative; padding-bottom: clamp(2rem,5vw,3.5rem); }
+.car-track {
+  display: grid; grid-auto-flow: column; grid-auto-columns: 84%;
+  gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory;
+  scroll-behavior: smooth; scrollbar-width: none; padding-bottom: 2px;
+}
+@media (min-width: 700px)  { .car-track { grid-auto-columns: 46.5%; } }
+@media (min-width: 1100px) { .car-track { grid-auto-columns: 31.4%; } }
+.car-track::-webkit-scrollbar { display: none; }
+.car-track .cell { scroll-snap-align: start; margin: 0; aspect-ratio: 4 / 3; }
+.car-track .cell img { width: 100%; height: 100%; object-fit: cover; }
+.car-bar { display: flex; align-items: center; gap: .75rem; margin-top: 1rem; }
+.car-bar .rail { flex: 1; height: 1px; background: var(--line); position: relative; overflow: hidden; }
+.car-bar .rail i {
+  position: absolute; inset: 0 auto 0 0; width: 100%; background: var(--lamp);
+  transform-origin: left; transform: scaleX(.3);
+  transition: transform .35s var(--ease);
+}
+.car-bar button {
+  flex: none; width: 38px; height: 38px; border-radius: 50%;
+  border: 1px solid var(--line); background: transparent; color: var(--paper);
+  cursor: pointer; font-size: 1rem; line-height: 1;
+  display: flex; align-items: center; justify-content: center;
+  transition: border-color .2s var(--ease), background .2s var(--ease), color .2s var(--ease), opacity .2s;
+}
+.car-bar button:hover:not(:disabled) { border-color: var(--lamp); background: var(--lamp); color: var(--ink); }
+.car-bar button:disabled { opacity: .25; cursor: default; }
+.car-bar .count { font-family: var(--f-mono); font-size: .64rem; letter-spacing: .14em; color: var(--muted); }
+
+/* ============================================================
+   SERIES — one titled block per body of photographs
+   ============================================================ */
+.series { padding-bottom: clamp(2rem,5vw,3.5rem); }
+/* clear the page nav and the sticky series bar when jumped to by anchor */
+#photography .series { scroll-margin-top: 8.5rem; }
+main section[id] { scroll-margin-top: 3.6rem; }
+.series-head {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: .4rem 1.2rem;
+  padding: 1.2rem 0 1.5rem; border-top: 1px solid var(--line-soft);
+}
+.series-head h3 {
+  font-family: var(--f-display); font-weight: 400; margin: 0;
+  font-size: clamp(1.55rem,3.4vw,2.5rem); line-height: 1; letter-spacing: -.015em;
+}
+.series-head .gear {
+  font-family: var(--f-mono); font-size: .63rem; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--lamp);
+}
+.series-head .n {
+  margin-left: auto; font-family: var(--f-mono); font-size: .63rem;
+  letter-spacing: .14em; color: var(--dim);
+}
+/* a smaller titled block nested inside a .series, e.g. the three cities
+   grouped under one "Cities" heading */
+.series-sub {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: .35rem 1rem;
+  padding: 1.6rem 0 1rem;
+}
+.series-sub h4 {
+  font-family: var(--f-display); font-weight: 400; margin: 0;
+  font-size: clamp(1.1rem,2.2vw,1.5rem); line-height: 1; letter-spacing: -.01em;
+}
+.series-sub .gear {
+  font-family: var(--f-mono); font-size: .62rem; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--lamp);
+}
+.series .grid, .series .carousel { padding-bottom: 0; }
+.plate .cell { aspect-ratio: 16 / 9; margin: 0; }
+.plate .cell img { width: 100%; height: 100%; object-fit: cover; }
+.series-nav { position: sticky; top: 3.4rem; z-index: 20; background: var(--ink);
+  padding: .9rem 0; margin: 0 0 .5rem; }
+.series-nav .chip { text-decoration: none; }
+/* narrow screens get one scrolling row rather than five stacked ones */
+@media (max-width: 760px) {
+  .series-nav .filters { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+  .series-nav .filters::-webkit-scrollbar { display: none; }
+  .series-nav .chip { white-space: nowrap; }
+  #photography .series { scroll-margin-top: 7rem; }
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#about">Skip to content</a>
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- ============================================================
+     EDIT ME — every outbound link on the page is defined once,
+     right here. Change a value and it updates everywhere.
+     Anything left as "" hides itself instead of becoming a dead link.
+     ============================================================ -->
+<script>
+window.LINKS = {
+  email:     "mailto:caolepingdoris@gmail.com",
+  linkedin:  "https://www.linkedin.com/in/doris-cao-a68a1a33a",
+  instagram: "https://www.instagram.com/doris.cao.film/",
+  vimeo:     "",                       /* reel or channel — adds a Vimeo icon when set */
+  imdb:      "",
+  resume:    "",                       /* e.g. "assets/doris-cao-resume.pdf" */
+
+  /* Per-project watch links */
+  circle:         "",
+  levi:           "",
+  poem:           "",
+  kmoryu:         "",
+  vividDream:     "",
+  whisperingRoom: "",
+  comeOnIn:       "",
+  annArbor:       "",
+  roseGarden:     "",
+  unsolvedProblem:""
+};
+</script>
+
+<nav class="nav" aria-label="Sections">
+  <a class="mark" href="#top">Doris&nbsp;Cao</a>
+  <ul>
+    <li><a class="n" href="#about">About</a></li>
+    <li><a class="n" href="#director">Director</a></li>
+    <li><a class="n" href="#producer">Producer</a></li>
+    <li><a class="n" href="#gaffer">Gaffer</a></li>
+    <li><a class="n" href="#installation">Installation</a></li>
+    <li><a class="n" href="#photography">Photography</a></li>
+    <li><a class="n" href="#credits">Credits</a></li>
+    <li><a class="n" href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ============================================================
+     MASTHEAD
+     ============================================================ -->
+<header class="masthead" id="top">
+  <div class="plate">
+    <img src="assets/full/hero.jpg" alt="Long-exposure reflection of bare branches and a figure in a winter puddle" fetchpriority="high" width="2600" height="1733">
+  </div>
+  <div class="keylight" id="keylight" aria-hidden="true"></div>
+
+  <div class="over">
+    <h1 class="wordmark"><span class="b">Doris</span><span class="b">Cao</span></h1>
+    <ul class="roles">
+      <li><a href="#director">Director</a></li>
+      <li><a href="#producer">Producer</a></li>
+      <li><a href="#photography">Photography</a></li>
+      <li><a href="#gaffer">Gaffer</a></li>
+      <li><a href="#installation">Installation</a></li>
+    </ul>
+  </div>
+
+  <div class="scrollcue" aria-hidden="true"><span>Scroll</span><i></i></div>
+</header>
+
+<div class="masthead-foot">
+  <div class="socials">
+    <a data-link="linkedin" href="#" aria-label="LinkedIn" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.1 21 14.2V21h-4v-6c0-1.43-.03-3.27-2-3.27-2 0-2.3 1.56-2.3 3.17V21H9z"/></svg>
+    </a>
+    <a data-link="email" href="#" aria-label="Email">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v.3l-10 6-10-6zM2 8.1l9.5 5.7a1 1 0 0 0 1 0L22 8.1V18.5a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5z"/></svg>
+    </a>
+    <a data-link="instagram" href="#" aria-label="Instagram" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 1.8.25 2.2.42.6.22 1 .48 1.4.9.42.42.68.82.9 1.4.17.42.36 1.03.42 2.2.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.06 1.2-.25 1.8-.42 2.2-.22.6-.48 1-.9 1.4-.42.42-.82.68-1.4.9-.42.17-1.03.36-2.2.42-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.06-1.8-.25-2.2-.42-.6-.22-1-.48-1.4-.9-.42-.42-.68-.82-.9-1.4-.17-.42-.36-1.03-.42-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.06-1.2.25-1.8.42-2.2.22-.6.48-1 .9-1.4.42-.42.82-.68 1.4-.9.42-.17 1.03-.36 2.2-.42C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.14 0-3.5.01-4.74.07-1.14.05-1.76.24-2.17.4-.55.22-.94.47-1.35.88-.41.41-.66.8-.88 1.35-.16.41-.35 1.03-.4 2.17C2.4 10.1 2.4 10.46 2.4 12s0 1.9.06 3.14c.05 1.14.24 1.76.4 2.17.22.55.47.94.88 1.35.41.41.8.66 1.35.88.41.16 1.03.35 2.17.4 1.24.06 1.6.07 4.74.07s3.5-.01 4.74-.07c1.14-.05 1.76-.24 2.17-.4.55-.22.94-.47 1.35-.88.41-.41.66-.8.88-1.35.16-.41.35-1.03.4-2.17.06-1.24.07-1.6.07-3.14s-.01-1.9-.07-3.14c-.05-1.14-.24-1.76-.4-2.17a3.6 3.6 0 0 0-.88-1.35 3.6 3.6 0 0 0-1.35-.88c-.41-.16-1.03-.35-2.17-.4C15.5 4.01 15.14 4 12 4zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 1.8a3.1 3.1 0 1 0 0 6.2 3.1 3.1 0 0 0 0-6.2zm5.1-3.2a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3z"/></svg>
+    </a>
+    <a data-link="vimeo" href="#" aria-label="Vimeo" target="_blank" rel="noopener" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 7.4c-.1 2.1-1.6 5-4.4 8.6-2.9 3.8-5.4 5.7-7.4 5.7-1.3 0-2.3-1.2-3.2-3.5L5.3 12c-.6-2.3-1.3-3.5-2-3.5-.15 0-.7.33-1.63.98L.7 8.23c1.02-.9 2.02-1.8 3-2.7 1.37-1.18 2.4-1.8 3.08-1.86 1.63-.16 2.63.95 3 3.32.4 2.56.68 4.15.84 4.78.47 2.13.98 3.2 1.54 3.2.43 0 1.08-.68 1.95-2.05.86-1.37 1.33-2.4 1.4-3.12.14-1.32-.37-1.98-1.53-1.98-.55 0-1.11.13-1.7.38 1.13-3.7 3.28-5.5 6.46-5.4 2.36.07 3.47 1.6 3.36 4.6z"/></svg>
+    </a>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ============================================================
+     01 — ABOUT
+     ============================================================ -->
+<section id="about" class="wrap">
+  <div class="head rise">
+    <div class="marker"><span class="no">01</span><span class="nm">About the artist</span></div>
+  </div>
+
+  <div class="about-grid">
+    <h2 class="pull rise" style="margin:0">A multimedia artist and producer dedicated to the space where <span>art, technology, and cultural storytelling</span> meet.</h2>
+
+    <div class="prose rise">
+      <p>Doris (Leping) Cao is a Boston-based filmmaker, photographer, and multimedia artist whose work probes the nuanced undercurrents of gender equality and diversity within everyday life. She holds a Bachelor’s degree from Emerson College’s School of Film, with a background in international film and art.</p>
+      <p>Doris seamlessly bridges tactile 16mm analog filmmaking and traditional darkroom processes with digital media and spatial design. For her, the photographic frame is never a final destination but a point of departure: her installations extend visual media, liberating moving and still imagery from the constraints of the frame to cultivate experiential environments where audience and narrative converge.</p>
+      <p>As a filmmaker, Doris is deeply interested in spectatorship and this awareness guides her approach to storytelling. For her, filmmaking is a bridge between individuals and communities; her goal as a director is to amplify diverse voices and create stories that resonate across boundaries. At the core of her artistic practice are questions of visibility, power, and emotional inheritance within contemporary society. She is particularly drawn to stories centered on marginalized and underrepresented voices, especially focus on feminism and the complexities of human connection in modern life.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ============================================================
+     02 — DIRECTOR
+     ============================================================ -->
+<section id="director" class="wrap">
+  <div class="head rise">
+    <div class="marker"><span class="no">02</span><span class="nm">Director</span></div>
+  </div>
+
+  <div class="projects">
+
+    <article class="project rise" data-gallery="levi">
+      <div class="pj-media">
+        <div class="pj-strip pj-strip-3" style="margin:0">
+    <button class="cell" data-cap="Levi By The Sea — 01" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1013"
+           src="assets/thumb/levi-01.jpg" alt="Levi By The Sea — 01">
+      <figcaption>01</figcaption>
+    </button>
+    <button class="cell" data-cap="Levi By The Sea — 02" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1013"
+           src="assets/thumb/levi-02.jpg" alt="Levi By The Sea — 02">
+      <figcaption>02</figcaption>
+    </button>
+    <button class="cell" data-cap="Levi By The Sea — 03" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1013"
+           src="assets/thumb/levi-03.jpg" alt="Levi By The Sea — 03">
+      <figcaption>03</figcaption>
+    </button>
+    <button class="cell" data-cap="Levi By The Sea — 04" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1013"
+           src="assets/thumb/levi-04.jpg" alt="Levi By The Sea — 04">
+      <figcaption>04</figcaption>
+    </button>
+    <button class="cell" data-cap="Levi By The Sea — 05" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1013"
+           src="assets/thumb/levi-05.jpg" alt="Levi By The Sea — 05">
+      <figcaption>05</figcaption>
+    </button>
+    <button class="cell" data-cap="Levi By The Sea — 06" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1013"
+           src="assets/thumb/levi-06.jpg" alt="Levi By The Sea — 06">
+      <figcaption>06</figcaption>
+    </button>
+        </div>
+      </div>
+      <div class="pj-text">
+        <p class="pj-index">01 / 03</p>
+        <div class="pj-kicker"><p class="label">2025</p></div>
+        <h3 class="pj-title">Levi By The Sea</h3>
+        <ul class="pj-meta">
+          <li><span>Role</span><span>Written &amp; directed</span></li>
+        </ul>
+        <a class="watch" data-link="levi" href="#" hidden>Watch</a>
+      </div>
+    </article>
+
+    <article class="project flip rise" data-gallery="unsolved">
+      <div class="pj-media">
+        <div class="pj-strip pj-strip-2" style="margin:0">
+    <button class="cell" data-cap="Unsolved Problem — 01" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1013"
+           src="assets/thumb/unsolved-01.jpg" alt="Unsolved Problem — 01">
+      <figcaption>01</figcaption>
+    </button>
+    <button class="cell" data-cap="Unsolved Problem — 02" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1013"
+           src="assets/thumb/unsolved-02.jpg" alt="Unsolved Problem — 02">
+      <figcaption>02</figcaption>
+    </button>
+    <button class="cell" data-cap="Unsolved Problem — 03" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1013"
+           src="assets/thumb/unsolved-03.jpg" alt="Unsolved Problem — 03">
+      <figcaption>03</figcaption>
+    </button>
+    <button class="cell" data-cap="Unsolved Problem — 04" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1013"
+           src="assets/thumb/unsolved-04.jpg" alt="Unsolved Problem — 04">
+      <figcaption>04</figcaption>
+    </button>
+        </div>
+      </div>
+      <div class="pj-text">
+        <p class="pj-index">02 / 03</p>
+        <div class="pj-kicker"><p class="label">2026</p></div>
+        <h3 class="pj-title">Unsolved Problem</h3>
+        <ul class="pj-meta">
+          <li><span>Role</span><span>Director · Writer · Producer</span></li>
+          <li><span>Note</span><span>Emerson capstone thesis</span></li>
+        </ul>
+        <a class="watch" data-link="unsolvedProblem" href="#" hidden>Watch</a>
+      </div>
+    </article>
+
+    <article class="project rise" data-gallery="circle">
+      <div class="pj-media">
+        <div class="pj-strip pj-strip-sq" style="margin:0">
+    <button class="cell" data-cap="How Can I Become A Circle — 01" type="button">
+      <img loading="lazy" decoding="async" width="1685" height="1337"
+           src="assets/thumb/circle-01.jpg" alt="How Can I Become A Circle — 01">
+      <figcaption>01</figcaption>
+    </button>
+    <button class="cell" data-cap="How Can I Become A Circle — 02" type="button">
+      <img loading="lazy" decoding="async" width="997" height="1003"
+           src="assets/thumb/circle-02.jpg" alt="How Can I Become A Circle — 02">
+      <figcaption>02</figcaption>
+    </button>
+    <button class="cell" data-cap="How Can I Become A Circle — 03" type="button">
+      <img loading="lazy" decoding="async" width="1086" height="1060"
+           src="assets/thumb/circle-03.jpg" alt="How Can I Become A Circle — 03">
+      <figcaption>03</figcaption>
+    </button>
+        </div>
+      </div>
+      <div class="pj-text">
+        <p class="pj-index">03 / 03</p>
+        <div class="pj-kicker"><p class="label">2025</p></div>
+        <h3 class="pj-title">How Can I<br>Become A Circle</h3>
+        <ul class="pj-meta">
+          <li><span>Role</span><span>Written &amp; directed</span></li>
+          <li><span>Format</span><span>16mm B&amp;W</span></li>
+        </ul>
+        <a class="watch" data-link="circle" href="#" hidden>Watch</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ============================================================
+     03 — PRODUCER
+     ============================================================ -->
+<section id="producer" class="wrap">
+  <div class="head rise">
+    <div class="marker"><span class="no">03</span><span class="nm">Producer</span></div>
+  </div>
+
+  <div class="projects">
+
+    <article class="project rise" data-gallery="poem">
+      <div class="pj-media">
+        <div class="pj-strip pj-strip-2" style="margin:0">
+    <button class="cell" data-cap="The Poem of Future — 01" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1013"
+           src="assets/thumb/poem-01.jpg" alt="The Poem of Future — 01">
+      <figcaption>01</figcaption>
+    </button>
+    <button class="cell" data-cap="The Poem of Future — 02" type="button">
+      <img loading="lazy" decoding="async" width="1440" height="810"
+           src="assets/thumb/poem-02.jpg" alt="The Poem of Future — 02">
+      <figcaption>02</figcaption>
+    </button>
+    <button class="cell" data-cap="The Poem of Future — 03" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1013"
+           src="assets/thumb/poem-03.jpg" alt="The Poem of Future — 03">
+      <figcaption>03</figcaption>
+    </button>
+    <button class="cell" data-cap="The Poem of Future — 04" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1013"
+           src="assets/thumb/poem-04.jpg" alt="The Poem of Future — 04">
+      <figcaption>04</figcaption>
+    </button>
+        </div>
+      </div>
+      <div class="pj-text">
+        <p class="pj-index">01 / 03</p>
+        <div class="pj-kicker"><p class="label">2026</p></div>
+        <h3 class="pj-title">The Poem of Future</h3>
+        <ul class="pj-meta">
+          <li><span>Role</span><span>Producer</span></li>
+          <li><span>Director</span><span>Ling Shi</span></li>
+        </ul>
+        <a class="watch" data-link="poem" href="#" hidden>Watch</a>
+      </div>
+    </article>
+
+    <article class="project flip rise" data-gallery="kmoryu">
+      <div class="pj-media">
+        <div class="pj-strip pj-strip-2" style="margin:0">
+    <button class="cell" data-cap="К МОРЮ — 01" type="button">
+      <img loading="lazy" decoding="async" width="1440" height="810"
+           src="assets/thumb/kmoryu-01.jpg" alt="К МОРЮ — 01">
+      <figcaption>01</figcaption>
+    </button>
+    <button class="cell" data-cap="К МОРЮ — 02" type="button">
+      <img loading="lazy" decoding="async" width="1440" height="810"
+           src="assets/thumb/kmoryu-02.jpg" alt="К МОРЮ — 02">
+      <figcaption>02</figcaption>
+    </button>
+    <button class="cell" data-cap="К МОРЮ — 03" type="button">
+      <img loading="lazy" decoding="async" width="1440" height="810"
+           src="assets/thumb/kmoryu-03.jpg" alt="К МОРЮ — 03">
+      <figcaption>03</figcaption>
+    </button>
+    <button class="cell" data-cap="К МОРЮ — 04" type="button">
+      <img loading="lazy" decoding="async" width="1440" height="810"
+           src="assets/thumb/kmoryu-04.jpg" alt="К МОРЮ — 04">
+      <figcaption>04</figcaption>
+    </button>
+        </div>
+      </div>
+      <div class="pj-text">
+        <p class="pj-index">02 / 03</p>
+        <div class="pj-kicker"><p class="label">2025</p></div>
+        <h3 class="pj-title">К МОРЮ</h3>
+        <ul class="pj-meta">
+          <li><span>Role</span><span>Producer</span></li>
+          <li><span>Director</span><span>Oto Wang</span></li>
+        </ul>
+        <a class="watch" data-link="kmoryu" href="#" hidden>Watch</a>
+      </div>
+    </article>
+
+    <article class="project rise" data-gallery="boylston">
+      <div class="pj-media">
+        <div class="pj-strip pj-strip-2" style="margin:0">
+    <button class="cell" data-cap="Boylston Film Festival — 01" type="button">
+      <img loading="lazy" decoding="async" width="1174" height="784"
+           src="assets/thumb/boylston-01.jpg" alt="Boylston Film Festival — 01">
+      <figcaption>01</figcaption>
+    </button>
+    <button class="cell" data-cap="Boylston Film Festival — 02" type="button">
+      <img loading="lazy" decoding="async" width="1273" height="1800"
+           src="assets/thumb/boylston-02.jpg" alt="Boylston Film Festival — 02">
+      <figcaption>02</figcaption>
+    </button>
+    <button class="cell" data-cap="Boylston Film Festival — 03" type="button">
+      <img loading="lazy" decoding="async" width="1442" height="810"
+           src="assets/thumb/boylston-03.jpg" alt="Boylston Film Festival — 03">
+      <figcaption>03</figcaption>
+    </button>
+    <button class="cell" data-cap="Boylston Film Festival — 04" type="button">
+      <img loading="lazy" decoding="async" width="1398" height="1080"
+           src="assets/thumb/boylston-04.jpg" alt="Boylston Film Festival — 04">
+      <figcaption>04</figcaption>
+    </button>
+        </div>
+      </div>
+      <div class="pj-text">
+        <p class="pj-index">03 / 03</p>
+        <div class="pj-kicker"><p class="label">2025</p></div>
+        <h3 class="pj-title">Boylston Film Festival</h3>
+        <ul class="pj-meta">
+          <li><span>Role</span><span>Film curator · organiser</span></li>
+          <li><span>Where</span><span>Emerson College · Boston University</span></li>
+        </ul>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ============================================================
+     04 — GAFFER
+     ============================================================ -->
+<section id="gaffer" class="wrap">
+  <div class="head rise">
+    <div class="marker"><span class="no">04</span><span class="nm">Gaffer</span></div>
+  </div>
+
+  <div class="projects">
+
+    <article class="project rise">
+      <div class="pj-media">
+        <img loading="lazy" src="assets/full/slide-whispering-room.jpg" alt="Whispering Room — a figure behind projected scrims" width="1800" height="1013">
+      </div>
+      <div class="pj-text">
+        <p class="pj-index">01 / 03</p>
+        <div class="pj-kicker"><p class="label">2025</p></div>
+        <h3 class="pj-title">Whispering Room</h3>
+        <ul class="pj-meta">
+          <li><span>Role</span><span>Gaffer</span></li>
+          <li><span>Director</span><span>Amber Yang</span></li>
+          <li><span>Format</span><span>New media project</span></li>
+        </ul>
+        <a class="watch" data-link="whisperingRoom" href="#" hidden>Watch</a>
+      </div>
+    </article>
+
+    <article class="project flip rise">
+      <div class="pj-media">
+        <img loading="lazy" src="assets/full/slide-ann-arbor.jpg" alt="Ann Arbor — night exteriors and warm interiors" width="1800" height="1013">
+      </div>
+      <div class="pj-text">
+        <p class="pj-index">02 / 03</p>
+        <div class="pj-kicker"><p class="label">2025</p></div>
+        <h3 class="pj-title">Ann Arbor</h3>
+        <ul class="pj-meta">
+          <li><span>Role</span><span>Key grip · G&amp;E</span></li>
+          <li><span>Director</span><span>James Wang</span></li>
+        </ul>
+        <a class="watch" data-link="annArbor" href="#" hidden>Watch</a>
+      </div>
+    </article>
+
+    <article class="project rise">
+      <div class="pj-media">
+        <img loading="lazy" src="assets/full/slide-come-on-in.jpg" alt="Come On In — night exterior and barn interior frames" width="1800" height="1013">
+      </div>
+      <div class="pj-text">
+        <p class="pj-index">03 / 03</p>
+        <div class="pj-kicker"><p class="label">2024</p></div>
+        <h3 class="pj-title">Come On In</h3>
+        <ul class="pj-meta">
+          <li><span>Role</span><span>Gaffer</span></li>
+          <li><span>Directors</span><span>Ethan Kroes &amp; Alex Colocousis</span></li>
+        </ul>
+        <a class="watch" data-link="comeOnIn" href="#" hidden>Watch</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ============================================================
+     05 — INSTALLATION
+     ============================================================ -->
+<section id="installation" class="wrap">
+  <div class="head rise">
+    <div class="marker"><span class="no">05</span><span class="nm">Installation &amp; new media</span></div>
+  </div>
+
+  <!-- ---- Vivid Dream ---- -->
+  <div class="series rise">
+    <div class="series-head">
+      <h3>Vivid Dream</h3>
+      <span class="gear">16mm film · digital video · mixed-media moving image installation</span>
+    </div>
+    <div class="carousel" data-gallery="vivid">
+      <div class="car-track">
+    <button class="cell" data-cap="Vivid Dream — 01" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1200"
+           src="assets/thumb/vivid-01.jpg" alt="Vivid Dream — 01">
+      <figcaption>01</figcaption>
+    </button>
+    <button class="cell" data-cap="Vivid Dream — 02" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1200"
+           src="assets/thumb/vivid-02.jpg" alt="Vivid Dream — 02">
+      <figcaption>02</figcaption>
+    </button>
+    <button class="cell" data-cap="Vivid Dream — 03" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1200"
+           src="assets/thumb/vivid-03.jpg" alt="Vivid Dream — 03">
+      <figcaption>03</figcaption>
+    </button>
+    <button class="cell" data-cap="Vivid Dream — 04" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1200"
+           src="assets/thumb/vivid-04.jpg" alt="Vivid Dream — 04">
+      <figcaption>04</figcaption>
+    </button>
+    <button class="cell" data-cap="Vivid Dream — 05" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1200"
+           src="assets/thumb/vivid-05.jpg" alt="Vivid Dream — 05">
+      <figcaption>05</figcaption>
+    </button>
+    <button class="cell" data-cap="Vivid Dream — 06" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1350"
+           src="assets/thumb/vivid-06.jpg" alt="Vivid Dream — 06">
+      <figcaption>06</figcaption>
+    </button>
+    <button class="cell" data-cap="Vivid Dream — 07" type="button">
+      <img loading="lazy" decoding="async" width="1280" height="960"
+           src="assets/thumb/vivid-07.jpg" alt="Vivid Dream — 07">
+      <figcaption>07</figcaption>
+    </button>
+      </div>
+      <div class="car-bar">
+        <button class="car-prev" type="button" aria-label="Previous frames">‹</button>
+        <button class="car-next" type="button" aria-label="Next frames">›</button>
+        <div class="rail" aria-hidden="true"><i></i></div>
+        <span class="count"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ---- Do You Feel It ---- -->
+  <div class="series rise">
+    <div class="series-head">
+      <h3>Do You Feel It</h3>
+      <span class="gear">Archival pigment prints · cyanotype · Second Natural Photo Exhibition, 2026</span>
+    </div>
+    <div class="carousel" data-gallery="feel">
+      <div class="car-track">
+    <button class="cell" data-cap="Do You Feel It — 01" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1201"
+           src="assets/thumb/feel-01.jpg" alt="Do You Feel It — 01">
+      <figcaption>01</figcaption>
+    </button>
+    <button class="cell" data-cap="Do You Feel It — 02" type="button">
+      <img loading="lazy" decoding="async" width="640" height="427"
+           src="assets/thumb/feel-02.jpg" alt="Do You Feel It — 02">
+      <figcaption>02</figcaption>
+    </button>
+    <button class="cell" data-cap="Do You Feel It — 03" type="button">
+      <img loading="lazy" decoding="async" width="392" height="523"
+           src="assets/thumb/feel-03.jpg" alt="Do You Feel It — 03">
+      <figcaption>03</figcaption>
+    </button>
+    <button class="cell" data-cap="Do You Feel It — 04" type="button">
+      <img loading="lazy" decoding="async" width="427" height="640"
+           src="assets/thumb/feel-04.jpg" alt="Do You Feel It — 04">
+      <figcaption>04</figcaption>
+    </button>
+    <button class="cell" data-cap="Do You Feel It — 05" type="button">
+      <img loading="lazy" decoding="async" width="495" height="640"
+           src="assets/thumb/feel-05.jpg" alt="Do You Feel It — 05">
+      <figcaption>05</figcaption>
+    </button>
+    <button class="cell" data-cap="Do You Feel It — 06" type="button">
+      <img loading="lazy" decoding="async" width="640" height="427"
+           src="assets/thumb/feel-06.jpg" alt="Do You Feel It — 06">
+      <figcaption>06</figcaption>
+    </button>
+    <button class="cell" data-cap="Do You Feel It — 07" type="button">
+      <img loading="lazy" decoding="async" width="340" height="227"
+           src="assets/thumb/feel-07.jpg" alt="Do You Feel It — 07">
+      <figcaption>07</figcaption>
+    </button>
+      </div>
+      <div class="car-bar">
+        <button class="car-prev" type="button" aria-label="Previous frames">‹</button>
+        <button class="car-next" type="button" aria-label="Next frames">›</button>
+        <div class="rail" aria-hidden="true"><i></i></div>
+        <span class="count"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ---- installation views ---- -->
+  <div class="series rise">
+    <div class="series-head">
+      <h3>Installation views</h3>
+      <span class="gear">Archival pigment prints 11×15, 22×30, 24×36 in · cyanotype 5×7 in</span>
+    </div>
+    <div data-gallery="install">
+      <div class="grid" style="columns:1">
+    <button class="cell" data-cap="Do You Feel It — installation view — 01" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1200"
+           src="assets/thumb/installwide-01.jpg" alt="Do You Feel It — installation view — 01">
+      <figcaption>01</figcaption>
+    </button>
+      </div>
+      <div class="grid wide" style="margin-top:12px">
+    <button class="cell" data-cap="Do You Feel It — installation view — 01" type="button">
+      <img loading="lazy" decoding="async" width="1200" height="1800"
+           src="assets/thumb/install-01.jpg" alt="Do You Feel It — installation view — 01">
+      <figcaption>01</figcaption>
+    </button>
+    <button class="cell" data-cap="Do You Feel It — installation view — 02" type="button">
+      <img loading="lazy" decoding="async" width="1200" height="1800"
+           src="assets/thumb/install-02.jpg" alt="Do You Feel It — installation view — 02">
+      <figcaption>02</figcaption>
+    </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ============================================================
+     06 — PHOTOGRAPHY
+     ============================================================ -->
+<section id="photography" class="wrap">
+  <div class="head rise">
+    <div class="marker"><span class="no">06</span><span class="nm">Photography</span></div>
+    <h2 class="section-title">Contact sheet.</h2>
+  </div>
+
+  <div class="series-nav">
+    <div class="filters" style="margin:0">
+      <a class="chip" href="#s-rainy">A Rainy Day In New York</a>
+      <a class="chip" href="#s-manchester">Manchester By The Sea</a>
+      <a class="chip" href="#s-portraits">Portraits</a>
+      <a class="chip" href="#s-dream">Dream Sequence</a>
+      <a class="chip" href="#s-cities">Cities</a>
+      <a class="chip" href="#s-chinatown">Chinatown</a>
+      <a class="chip" href="#s-event">Event</a>
+      <a class="chip" href="#s-bts">Behind The Scene</a>
+    </div>
+  </div>
+
+  <div class="series rise" id="s-rainy">
+    <div class="plate" data-gallery="p-rainy">
+      <button class="cell" data-cap="A Rainy Day In New York" type="button">
+        <img loading="lazy" decoding="async" src="assets/thumb/slide-rainy-new-york.jpg" alt="A Rainy Day In New York" width="760" height="428">
+      </button>
+    </div>
+  </div>
+
+  <div class="series rise" id="s-manchester">
+    <div class="plate" data-gallery="p-manchester">
+      <button class="cell" data-cap="Manchester By The Sea" type="button">
+        <img loading="lazy" decoding="async" src="assets/thumb/slide-manchester.jpg" alt="Manchester By The Sea" width="760" height="428">
+      </button>
+    </div>
+  </div>
+
+  <div class="series rise" id="s-portraits">
+    <div class="plate" data-gallery="p-portraits">
+      <button class="cell" data-cap="Portraits" type="button">
+        <img loading="lazy" decoding="async" src="assets/thumb/slide-portraits.jpg" alt="Portraits" width="760" height="428">
+      </button>
+    </div>
+  </div>
+
+  <div class="series rise" id="s-dream">
+    <div class="plate" data-gallery="p-dream">
+      <button class="cell" data-cap="Dream Sequence" type="button">
+        <img loading="lazy" decoding="async" src="assets/thumb/slide-dream-sequence.jpg" alt="Dream Sequence" width="760" height="428">
+      </button>
+    </div>
+  </div>
+
+  <div class="series rise" id="s-cities">
+    <div class="series-head"><h3>Cities</h3></div>
+
+    <div class="series-sub">
+      <h4>Guangzhou · Changsha · Beijing</h4>
+      <span class="gear">Ricoh XR7 · Kodak 5207</span>
+    </div>
+    <div class="grid" data-gallery="cities">
+    <button class="cell" data-cap="Cities — 01" type="button">
+      <img loading="lazy" decoding="async" width="1599" height="1080"
+           src="assets/thumb/cities-01.jpg" alt="Cities — 01">
+      <figcaption>01</figcaption>
+    </button>
+    <button class="cell" data-cap="Cities — 02" type="button">
+      <img loading="lazy" decoding="async" width="1738" height="785"
+           src="assets/thumb/cities-02.jpg" alt="Cities — 02">
+      <figcaption>02</figcaption>
+    </button>
+    <button class="cell" data-cap="Cities — 03" type="button">
+      <img loading="lazy" decoding="async" width="1440" height="966"
+           src="assets/thumb/cities-03.jpg" alt="Cities — 03">
+      <figcaption>03</figcaption>
+    </button>
+    <button class="cell" data-cap="Cities — 04" type="button">
+      <img loading="lazy" decoding="async" width="1440" height="966"
+           src="assets/thumb/cities-04.jpg" alt="Cities — 04">
+      <figcaption>04</figcaption>
+    </button>
+    <button class="cell" data-cap="Cities — 05" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="783"
+           src="assets/thumb/cities-05.jpg" alt="Cities — 05">
+      <figcaption>05</figcaption>
+    </button>
+    <button class="cell" data-cap="Cities — 06" type="button">
+      <img loading="lazy" decoding="async" width="1599" height="1080"
+           src="assets/thumb/cities-06.jpg" alt="Cities — 06">
+      <figcaption>06</figcaption>
+    </button>
+    <button class="cell" data-cap="Cities — 07" type="button">
+      <img loading="lazy" decoding="async" width="1599" height="1080"
+           src="assets/thumb/cities-07.jpg" alt="Cities — 07">
+      <figcaption>07</figcaption>
+    </button>
+    <button class="cell" data-cap="Cities — 08" type="button">
+      <img loading="lazy" decoding="async" width="1599" height="1080"
+           src="assets/thumb/cities-08.jpg" alt="Cities — 08">
+      <figcaption>08</figcaption>
+    </button>
+    </div>
+
+    <div class="series-sub">
+      <h4>Los Angeles</h4>
+      <span class="gear">iPhone 17 Pro</span>
+    </div>
+    <div class="grid" data-gallery="la">
+    <button class="cell" data-cap="Los Angeles — 01" type="button">
+      <img loading="lazy" decoding="async" width="1350" height="1800"
+           src="assets/thumb/la-01.jpg" alt="Los Angeles — 01">
+      <figcaption>01</figcaption>
+    </button>
+    <button class="cell" data-cap="Los Angeles — 02" type="button">
+      <img loading="lazy" decoding="async" width="1350" height="1800"
+           src="assets/thumb/la-02.jpg" alt="Los Angeles — 02">
+      <figcaption>02</figcaption>
+    </button>
+    <button class="cell" data-cap="Los Angeles — 03" type="button">
+      <img loading="lazy" decoding="async" width="1350" height="1800"
+           src="assets/thumb/la-03.jpg" alt="Los Angeles — 03">
+      <figcaption>03</figcaption>
+    </button>
+    <button class="cell" data-cap="Los Angeles — 04" type="button">
+      <img loading="lazy" decoding="async" width="1440" height="960"
+           src="assets/thumb/la-04.jpg" alt="Los Angeles — 04">
+      <figcaption>04</figcaption>
+    </button>
+    <button class="cell" data-cap="Los Angeles — 05" type="button">
+      <img loading="lazy" decoding="async" width="1440" height="960"
+           src="assets/thumb/la-05.jpg" alt="Los Angeles — 05">
+      <figcaption>05</figcaption>
+    </button>
+    <button class="cell" data-cap="Los Angeles — 06" type="button">
+      <img loading="lazy" decoding="async" width="1350" height="1800"
+           src="assets/thumb/la-06.jpg" alt="Los Angeles — 06">
+      <figcaption>06</figcaption>
+    </button>
+    <button class="cell" data-cap="Los Angeles — 07" type="button">
+      <img loading="lazy" decoding="async" width="1440" height="960"
+           src="assets/thumb/la-07.jpg" alt="Los Angeles — 07">
+      <figcaption>07</figcaption>
+    </button>
+    <button class="cell" data-cap="Los Angeles — 08" type="button">
+      <img loading="lazy" decoding="async" width="1440" height="960"
+           src="assets/thumb/la-08.jpg" alt="Los Angeles — 08">
+      <figcaption>08</figcaption>
+    </button>
+    </div>
+
+    <div class="plate" data-gallery="p-boston">
+      <button class="cell" data-cap="Boston — Fuji GFX 50R" type="button">
+        <img loading="lazy" decoding="async" src="assets/thumb/slide-boston-fuji.jpg" alt="Boston — Fuji GFX 50R" width="760" height="428">
+      </button>
+    </div>
+    <div class="series-sub" style="padding-top:1rem">
+      <h4>Boston</h4>
+      <span class="gear">Lumix S5M2</span>
+    </div>
+    <div class="grid" data-gallery="bostonl">
+    <button class="cell" data-cap="Boston — 01" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1200"
+           src="assets/thumb/bostonl-01.jpg" alt="Boston — 01">
+      <figcaption>01</figcaption>
+    </button>
+    <button class="cell" data-cap="Boston — 02" type="button">
+      <img loading="lazy" decoding="async" width="1200" height="1800"
+           src="assets/thumb/bostonl-02.jpg" alt="Boston — 02">
+      <figcaption>02</figcaption>
+    </button>
+    <button class="cell" data-cap="Boston — 03" type="button">
+      <img loading="lazy" decoding="async" width="1200" height="1800"
+           src="assets/thumb/bostonl-03.jpg" alt="Boston — 03">
+      <figcaption>03</figcaption>
+    </button>
+    <button class="cell" data-cap="Boston — 04" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1200"
+           src="assets/thumb/bostonl-04.jpg" alt="Boston — 04">
+      <figcaption>04</figcaption>
+    </button>
+    <button class="cell" data-cap="Boston — 05" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1200"
+           src="assets/thumb/bostonl-05.jpg" alt="Boston — 05">
+      <figcaption>05</figcaption>
+    </button>
+    <button class="cell" data-cap="Boston — 06" type="button">
+      <img loading="lazy" decoding="async" width="1200" height="1800"
+           src="assets/thumb/bostonl-06.jpg" alt="Boston — 06">
+      <figcaption>06</figcaption>
+    </button>
+    </div>
+  </div>
+
+  <div class="series rise" id="s-chinatown">
+    <div class="series-head"><h3>Chinatown</h3><span class="gear">Hasselblad · Ilford HP5</span></div>
+    <div class="grid" data-gallery="chinatown">
+    <button class="cell" data-cap="Chinatown — 01" type="button">
+      <img loading="lazy" decoding="async" width="1080" height="1080"
+           src="assets/thumb/chinatown-01.jpg" alt="Chinatown — 01">
+      <figcaption>01</figcaption>
+    </button>
+    <button class="cell" data-cap="Chinatown — 02" type="button">
+      <img loading="lazy" decoding="async" width="1080" height="1080"
+           src="assets/thumb/chinatown-02.jpg" alt="Chinatown — 02">
+      <figcaption>02</figcaption>
+    </button>
+    <button class="cell" data-cap="Chinatown — 03" type="button">
+      <img loading="lazy" decoding="async" width="1175" height="1175"
+           src="assets/thumb/chinatown-03.jpg" alt="Chinatown — 03">
+      <figcaption>03</figcaption>
+    </button>
+    <button class="cell" data-cap="Chinatown — 04" type="button">
+      <img loading="lazy" decoding="async" width="1080" height="1080"
+           src="assets/thumb/chinatown-04.jpg" alt="Chinatown — 04">
+      <figcaption>04</figcaption>
+    </button>
+    <button class="cell" data-cap="Chinatown — 05" type="button">
+      <img loading="lazy" decoding="async" width="1080" height="1080"
+           src="assets/thumb/chinatown-05.jpg" alt="Chinatown — 05">
+      <figcaption>05</figcaption>
+    </button>
+    </div>
+  </div>
+
+  <div class="series rise" id="s-event">
+    <div class="series-head"><h3>Event photography</h3><span class="gear">Lumix S5M2</span></div>
+    <div class="grid" data-gallery="event">
+    <button class="cell" data-cap="Event photography — 01" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1200"
+           src="assets/thumb/event-01.jpg" alt="Event photography — 01">
+      <figcaption>01</figcaption>
+    </button>
+    <button class="cell" data-cap="Event photography — 02" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1200"
+           src="assets/thumb/event-02.jpg" alt="Event photography — 02">
+      <figcaption>02</figcaption>
+    </button>
+    <button class="cell" data-cap="Event photography — 03" type="button">
+      <img loading="lazy" decoding="async" width="1200" height="1800"
+           src="assets/thumb/event-03.jpg" alt="Event photography — 03">
+      <figcaption>03</figcaption>
+    </button>
+    <button class="cell" data-cap="Event photography — 04" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1200"
+           src="assets/thumb/event-04.jpg" alt="Event photography — 04">
+      <figcaption>04</figcaption>
+    </button>
+    <button class="cell" data-cap="Event photography — 05" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1200"
+           src="assets/thumb/event-05.jpg" alt="Event photography — 05">
+      <figcaption>05</figcaption>
+    </button>
+    <button class="cell" data-cap="Event photography — 06" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1200"
+           src="assets/thumb/event-06.jpg" alt="Event photography — 06">
+      <figcaption>06</figcaption>
+    </button>
+    <button class="cell" data-cap="Event photography — 07" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1200"
+           src="assets/thumb/event-07.jpg" alt="Event photography — 07">
+      <figcaption>07</figcaption>
+    </button>
+    <button class="cell" data-cap="Event photography — 08" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1200"
+           src="assets/thumb/event-08.jpg" alt="Event photography — 08">
+      <figcaption>08</figcaption>
+    </button>
+    <button class="cell" data-cap="Event photography — 09" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1200"
+           src="assets/thumb/event-09.jpg" alt="Event photography — 09">
+      <figcaption>09</figcaption>
+    </button>
+    <button class="cell" data-cap="Event photography — 10" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1200"
+           src="assets/thumb/event-10.jpg" alt="Event photography — 10">
+      <figcaption>10</figcaption>
+    </button>
+    <button class="cell" data-cap="Event photography — 11" type="button">
+      <img loading="lazy" decoding="async" width="1800" height="1200"
+           src="assets/thumb/event-11.jpg" alt="Event photography — 11">
+      <figcaption>11</figcaption>
+    </button>
+    </div>
+  </div>
+
+  <div class="series rise" id="s-bts">
+    <div class="plate" data-gallery="p-bts">
+      <button class="cell" data-cap="Behind The Scene" type="button">
+        <img loading="lazy" decoding="async" src="assets/thumb/slide-behind-the-scene.jpg" alt="Behind The Scene" width="760" height="428">
+      </button>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ============================================================
+     07 — CREDITS
+     ============================================================ -->
+<section id="credits" class="wrap">
+  <div class="head rise">
+    <div class="marker"><span class="no">07</span><span class="nm">Selected credits</span></div>
+    <h2 class="section-title">The crew list.</h2>
+  </div>
+
+  <div class="filters" role="group" aria-label="Filter credits by department">
+    <button class="chip" data-dept="all" aria-pressed="true">All<span class="n" data-deptcount="all"></span></button>
+    <button class="chip" data-dept="Director" aria-pressed="false">Director<span class="n" data-deptcount="Director"></span></button>
+    <button class="chip" data-dept="Producer" aria-pressed="false">Producer<span class="n" data-deptcount="Producer"></span></button>
+    <button class="chip" data-dept="Gaffer" aria-pressed="false">Gaffer<span class="n" data-deptcount="Gaffer"></span></button>
+    <button class="chip" data-dept="Camera" aria-pressed="false">Camera<span class="n" data-deptcount="Camera"></span></button>
+    <button class="chip" data-dept="G&amp;E" aria-pressed="false">G&amp;E<span class="n" data-deptcount="G&amp;E"></span></button>
+  </div>
+
+  <div class="credits" id="credit-list">
+
+    <div class="credit" data-dept="Director"><span class="yr">2026</span><span class="ti">Unsolved Problem<em>Emerson capstone thesis</em></span><span class="ro">Director · Writer · Producer</span><span class="di">Boston MA</span></div>
+    <div class="credit" data-dept="Director"><span class="yr">2025</span><span class="ti">How Can I Become A Circle<em>Awarded experimental short · 16mm B&amp;W</em></span><span class="ro">Director · Writer</span><span class="di">Boston MA</span></div>
+    <div class="credit" data-dept="Director"><span class="yr">2025</span><span class="ti">Levi By The Sea<em>Awarded independent short</em></span><span class="ro">Director · Writer</span><span class="di">Boston MA</span></div>
+    <div class="credit" data-dept="Director"><span class="yr">2025</span><span class="ti">Desire Under Our Uniform<em>Minishorts vertical series</em></span><span class="ro">1st AD</span><span class="di">Boston MA</span></div>
+    <div class="credit" data-dept="Director"><span class="yr">2024</span><span class="ti">Life Back Again<em>Experimental short</em></span><span class="ro">Co-director</span><span class="di">Beijing, China</span></div>
+
+    <div class="credit" data-dept="Producer"><span class="yr">2026</span><span class="ti">Unsolved Problem<em>Emerson capstone thesis</em></span><span class="ro">Producer</span><span class="di">Boston MA</span></div>
+    <div class="credit" data-dept="Producer"><span class="yr">2026</span><span class="ti">The Poem of Future<em>Independent film</em></span><span class="ro">Producer</span><span class="di">dir. Ling Shi</span></div>
+    <div class="credit" data-dept="Producer"><span class="yr">2025</span><span class="ti">К МОРЮ<em>Independent film</em></span><span class="ro">Producer</span><span class="di">dir. Oto Wang</span></div>
+    <div class="credit" data-dept="Producer"><span class="yr">2025</span><span class="ti">June 31<sup>st</sup></span><span class="ro">Producer</span><span class="di">dir. Ling Shi</span></div>
+    <div class="credit" data-dept="Producer"><span class="yr">2024</span><span class="ti">18th First Film Festival — <em style="display:inline;font-family:inherit;font-size:inherit;text-transform:none;letter-spacing:0;color:inherit">“Training Camp”</em></span><span class="ro">Production assistant</span><span class="di">XiNing, China</span></div>
+
+    <div class="credit" data-dept="Gaffer"><span class="yr">2025</span><span class="ti">Whispering Room<em>New media project</em></span><span class="ro">Gaffer</span><span class="di">dir. Amber Yang</span></div>
+    <div class="credit" data-dept="Gaffer"><span class="yr">2024</span><span class="ti">The Rose Garden</span><span class="ro">Gaffer</span><span class="di">dir. Katherine Langdry</span></div>
+    <div class="credit" data-dept="Gaffer"><span class="yr">2024</span><span class="ti">Ruthless</span><span class="ro">Gaffer</span><span class="di">Boston MA</span></div>
+    <div class="credit" data-dept="Gaffer"><span class="yr">2024</span><span class="ti">Shameless</span><span class="ro">Gaffer</span><span class="di">dir. Zixuan Wang</span></div>
+    <div class="credit" data-dept="Gaffer"><span class="yr">2024</span><span class="ti">Come On In</span><span class="ro">Gaffer</span><span class="di">dir. Ethan Kroes &amp; Alex Colocousis</span></div>
+    <div class="credit" data-dept="Gaffer"><span class="yr">2023</span><span class="ti">Jetty Understanding</span><span class="ro">Gaffer</span><span class="di">dir. Amber Yang</span></div>
+
+    <div class="credit" data-dept="Camera"><span class="yr">2024</span><span class="ti">The Fool</span><span class="ro">2nd AC</span><span class="di">dir. Ling Shi</span></div>
+    <div class="credit" data-dept="Camera"><span class="yr">2023</span><span class="ti">Take A Photo<em>Music video</em></span><span class="ro">Camera op</span><span class="di">dir. Calvino Philips</span></div>
+    <div class="credit" data-dept="Camera"><span class="yr">2023</span><span class="ti">Winter Mail</span><span class="ro">Camera op</span><span class="di">dir. Yiduo Wang</span></div>
+    <div class="credit" data-dept="Camera"><span class="yr">2023</span><span class="ti">Emerson EUDT promo</span><span class="ro">DoP</span><span class="di">Boston MA</span></div>
+    <div class="credit" data-dept="Camera"><span class="yr">2023</span><span class="ti">Grim Reefer</span><span class="ro">Camera op · 1st AC</span><span class="di">dir. Calvino Philips</span></div>
+
+    <div class="credit" data-dept="G&amp;E"><span class="yr">2025</span><span class="ti">We Are Privilege Few</span><span class="ro">G&amp;E</span><span class="di">dir. Albina Aliyeva</span></div>
+    <div class="credit" data-dept="G&amp;E"><span class="yr">2025</span><span class="ti">Ann Arbor</span><span class="ro">Key grip</span><span class="di">dir. James Wang</span></div>
+    <div class="credit" data-dept="G&amp;E"><span class="yr">2025</span><span class="ti">1H22M</span><span class="ro">G&amp;E</span><span class="di">dir. Yangbo Liu</span></div>
+    <div class="credit" data-dept="G&amp;E"><span class="yr">2024</span><span class="ti">Forbidden Fruit</span><span class="ro">G&amp;E</span><span class="di">dir. Jieyi Zhang</span></div>
+    <div class="credit" data-dept="G&amp;E"><span class="yr">2023</span><span class="ti">Delivery</span><span class="ro">G&amp;E</span><span class="di">dir. Zhuoheng Wang</span></div>
+
+  </div>
+
+  <div class="cred-pager" id="cred-pager">
+    <button class="cred-prev" type="button" aria-label="Previous page">‹</button>
+    <span class="cred-page"></span>
+    <button class="cred-next" type="button" aria-label="Next page">›</button>
+  </div>
+
+  <p style="margin:1.8rem 0 clamp(3rem,7vw,6rem)"><a class="big-link" data-link="resume" href="#" style="font-size:clamp(1rem,2vw,1.3rem)" hidden>Download the full résumé (PDF) →</a></p>
+</section>
+
+<!-- ============================================================
+     08 — CONTACT
+     ============================================================ -->
+<section id="contact" class="wrap contact">
+  <div class="marker" style="display:flex;align-items:center;gap:1rem;padding-bottom:.9rem;border-bottom:1px solid var(--line-soft)">
+    <span class="no" style="font-family:var(--f-mono);font-size:.68rem;letter-spacing:.2em;color:var(--lamp)">08</span>
+    <span class="nm" style="font-family:var(--f-mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)">Contact</span>
+  </div>
+  <h2 class="section-title" style="margin-bottom:2rem">Bring me a script,<br>or a room to light.</h2>
+
+  <p style="margin:0"><a class="big-link" data-link="email" data-fill="email" href="#" style="font-size:clamp(1.05rem,2.2vw,1.5rem)">caolepingdoris@gmail.com</a></p>
+
+</section>
+</main>
+
+<footer>
+  <p class="label">© <span id="yr"></span> Doris (Leping) Cao</p>
+</footer>
+
+<!-- ============================================================
+     LIGHTBOX
+     ============================================================ -->
+<figure class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="x"    type="button" aria-label="Close">✕</button>
+  <button class="prev" type="button" aria-label="Previous">‹</button>
+  <button class="next" type="button" aria-label="Next">›</button>
+  <img alt="">
+  <figcaption></figcaption>
+</figure>
+
+<script>
+(() => {
+  "use strict";
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---- 1. apply LINKS, hide anything left empty ---------------- */
+  document.querySelectorAll("[data-link]").forEach(el => {
+    const url = (window.LINKS || {})[el.dataset.link] || "";
+    if (!url) { el.hidden = true; el.removeAttribute("href"); return; }
+    el.hidden = false;
+    el.href = url;
+    if (el.dataset.fill === "email") el.textContent = url.replace(/^mailto:/, "");
+  });
+
+  document.getElementById("yr").textContent = new Date().getFullYear();
+
+  /* ---- 2. scroll progress -------------------------------------- */
+  const bar = document.getElementById("progress");
+  let ticking = false;
+  const drawBar = () => {
+    const h = document.documentElement.scrollHeight - innerHeight;
+    bar.style.transform = `scaleX(${h > 0 ? scrollY / h : 0})`;
+    ticking = false;
+  };
+  addEventListener("scroll", () => {
+    if (!ticking) { ticking = true; requestAnimationFrame(drawBar); }
+  }, { passive: true });
+  drawBar();
+
+  /* ---- 3. masthead key light follows the pointer --------------- */
+  const mast = document.getElementById("top");
+  const key  = document.getElementById("keylight");
+  if (mast && key && !reduced && matchMedia("(pointer: fine)").matches) {
+    mast.addEventListener("pointermove", e => {
+      const r = mast.getBoundingClientRect();
+      key.style.setProperty("--lx", ((e.clientX - r.left) / r.width  * 100) + "%");
+      key.style.setProperty("--ly", ((e.clientY - r.top)  / r.height * 100) + "%");
+    });
+  }
+
+  /* ---- 4. carousels -------------------------------------------- */
+  document.querySelectorAll(".carousel").forEach(car => {
+    const track = car.querySelector(".car-track");
+    const prev  = car.querySelector(".car-prev");
+    const next  = car.querySelector(".car-next");
+    const fill  = car.querySelector(".rail i");
+    const count = car.querySelector(".count");
+    const total = track.children.length;
+
+    const page = () => {
+      // one page = however many whole frames are on screen right now
+      const w = track.children[0].getBoundingClientRect().width + 12;
+      return Math.max(1, Math.round(track.clientWidth / w));
+    };
+    const sync = () => {
+      const max = track.scrollWidth - track.clientWidth;
+      const per = page();
+      const at  = max <= 1 ? 0 : track.scrollLeft / max;
+      fill.style.transform = `scaleX(${max <= 1 ? 1 : Math.max(per / total, at * (1 - per / total) + per / total)})`;
+      prev.disabled = track.scrollLeft <= 2;
+      next.disabled = track.scrollLeft >= max - 2;
+      const first = Math.round(at * (total - per)) + 1;
+      count.textContent = max <= 1
+        ? String(total).padStart(2, "0")
+        : `${String(first).padStart(2, "0")}–${String(Math.min(first + per - 1, total)).padStart(2, "0")} / ${String(total).padStart(2, "0")}`;
+    };
+    const go = d => {
+      const w = track.children[0].getBoundingClientRect().width + 12;
+      track.scrollBy({ left: d * w * page(), behavior: reduced ? "auto" : "smooth" });
+    };
+    prev.addEventListener("click", () => go(-1));
+    next.addEventListener("click", () => go(1));
+    track.addEventListener("scroll", () => requestAnimationFrame(sync), { passive: true });
+    addEventListener("resize", sync);
+    sync();
+  });
+
+  /* ---- 5. credits filter + pagination ---------------------------- */
+  const credits = [...document.querySelectorAll("#credit-list .credit")];
+  const dcounts = { all: credits.length };
+  credits.forEach(c => { dcounts[c.dataset.dept] = (dcounts[c.dataset.dept] || 0) + 1; });
+  document.querySelectorAll("[data-deptcount]").forEach(n => {
+    n.textContent = String(dcounts[n.dataset.deptcount] || 0).padStart(2, "0");
+  });
+
+  const PAGE_SIZE = 6;
+  const pager = document.getElementById("cred-pager");
+  const pPrev = pager.querySelector(".cred-prev");
+  const pNext = pager.querySelector(".cred-next");
+  const pLbl  = pager.querySelector(".cred-page");
+  let dept = "all", page = 0;
+
+  function renderCredits() {
+    const shown = credits.filter(c => dept === "all" || c.dataset.dept === dept);
+    const pages = Math.max(1, Math.ceil(shown.length / PAGE_SIZE));
+    page = Math.min(page, pages - 1);
+    credits.forEach(c => { c.hidden = true; });
+    shown.slice(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE).forEach(c => { c.hidden = false; });
+    pLbl.textContent = `${String(page + 1).padStart(2, "0")} / ${String(pages).padStart(2, "0")}`;
+    pPrev.disabled = page === 0;
+    pNext.disabled = page >= pages - 1;
+    pager.hidden = pages <= 1;
+  }
+  pPrev.addEventListener("click", () => { page--; renderCredits(); });
+  pNext.addEventListener("click", () => { page++; renderCredits(); });
+
+  document.querySelectorAll(".chip[data-dept]").forEach(btn =>
+    btn.addEventListener("click", () => {
+      dept = btn.dataset.dept;
+      page = 0;
+      document.querySelectorAll(".chip[data-dept]").forEach(b =>
+        b.setAttribute("aria-pressed", String(b === btn)));
+      renderCredits();
+    }));
+  renderCredits();
+
+  /* ---- 6. lightbox --------------------------------------------- */
+  const lb   = document.getElementById("lb");
+  const lbIm = lb.querySelector("img");
+  const lbCp = lb.querySelector("figcaption");
+  let list = [], idx = 0, opener = null;
+
+  function paint() {
+    const cell = list[idx];
+    const img  = cell.querySelector("img");
+    lbIm.src = img.src.replace("/thumb/", "/full/");
+    lbIm.alt = img.alt;
+    lbCp.textContent = list.length > 1
+      ? `${cell.dataset.cap || img.alt}  ·  ${idx + 1} / ${list.length}`
+      : (cell.dataset.cap || img.alt);
+  }
+  function open(cell) {
+    list = [...cell.closest("[data-gallery]").querySelectorAll(".cell")].filter(c => !c.hidden);
+    idx  = list.indexOf(cell);
+    opener = cell;
+    lb.classList.add("on");
+    document.body.style.overflow = "hidden";
+    lb.querySelector(".prev").hidden = lb.querySelector(".next").hidden = list.length < 2;
+    paint();
+    lb.querySelector(".x").focus();
+  }
+  function close() {
+    lb.classList.remove("on");
+    document.body.style.overflow = "";
+    if (opener) opener.focus();
+  }
+  const step = d => { idx = (idx + d + list.length) % list.length; paint(); };
+
+  document.querySelectorAll("[data-gallery]").forEach(g =>
+    g.addEventListener("click", e => {
+      const cell = e.target.closest(".cell");
+      if (cell) open(cell);
+    }));
+  lb.querySelector(".x").addEventListener("click", close);
+  lb.querySelector(".prev").addEventListener("click", () => step(-1));
+  lb.querySelector(".next").addEventListener("click", () => step(1));
+  lb.addEventListener("click", e => { if (e.target === lb || e.target === lbIm) close(); });
+  addEventListener("keydown", e => {
+    if (!lb.classList.contains("on")) return;
+    if (e.key === "Escape")     close();
+    if (e.key === "ArrowLeft")  step(-1);
+    if (e.key === "ArrowRight") step(1);
+  });
+
+  /* ---- 7. reveal on scroll & nav highlight --------------------- */
+  if (!reduced && "IntersectionObserver" in window) {
+    const io = new IntersectionObserver((es, o) => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); o.unobserve(e.target); }
+    }), { rootMargin: "0px 0px -8% 0px" });
+    document.querySelectorAll(".rise").forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll(".rise").forEach(el => el.classList.add("in"));
+  }
+
+  const navLinks = [...document.querySelectorAll(".nav a.n")];
+  const spy = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    navLinks.forEach(a =>
+      a.setAttribute("aria-current", String(a.getAttribute("href") === "#" + e.target.id)));
+  }), { rootMargin: "-45% 0px -50% 0px" });
+  document.querySelectorAll("main section[id]").forEach(s => spy.observe(s));
+})();
+</script>
+
+</body>
+</html>

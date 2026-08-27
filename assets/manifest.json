@@ -1,0 +1,572 @@
+{
+ "levi": [
+  {
+   "src": "levi-01",
+   "w": 1800,
+   "h": 1013,
+   "alt": "Levi By The Sea — 1"
+  },
+  {
+   "src": "levi-02",
+   "w": 1800,
+   "h": 1013,
+   "alt": "Levi By The Sea — 2"
+  },
+  {
+   "src": "levi-03",
+   "w": 1800,
+   "h": 1013,
+   "alt": "Levi By The Sea — 3"
+  },
+  {
+   "src": "levi-04",
+   "w": 1800,
+   "h": 1013,
+   "alt": "Levi By The Sea — 4"
+  },
+  {
+   "src": "levi-05",
+   "w": 1800,
+   "h": 1013,
+   "alt": "Levi By The Sea — 5"
+  },
+  {
+   "src": "levi-06",
+   "w": 1800,
+   "h": 1013,
+   "alt": "Levi By The Sea — 6"
+  }
+ ],
+ "circle": [
+  {
+   "src": "circle-01",
+   "w": 1685,
+   "h": 1337,
+   "alt": "How Can I Become A Circle — 1"
+  },
+  {
+   "src": "circle-02",
+   "w": 997,
+   "h": 1003,
+   "alt": "How Can I Become A Circle — 2"
+  },
+  {
+   "src": "circle-03",
+   "w": 1086,
+   "h": 1060,
+   "alt": "How Can I Become A Circle — 3"
+  }
+ ],
+ "unsolved": [
+  {
+   "src": "unsolved-01",
+   "w": 1800,
+   "h": 1013,
+   "alt": "Unsolved Problem — 1"
+  },
+  {
+   "src": "unsolved-02",
+   "w": 1800,
+   "h": 1013,
+   "alt": "Unsolved Problem — 2"
+  },
+  {
+   "src": "unsolved-03",
+   "w": 1800,
+   "h": 1013,
+   "alt": "Unsolved Problem — 3"
+  },
+  {
+   "src": "unsolved-04",
+   "w": 1800,
+   "h": 1013,
+   "alt": "Unsolved Problem — 4"
+  }
+ ],
+ "poem": [
+  {
+   "src": "poem-01",
+   "w": 1800,
+   "h": 1013,
+   "alt": "The Poem of Future — 1"
+  },
+  {
+   "src": "poem-02",
+   "w": 1440,
+   "h": 810,
+   "alt": "The Poem of Future — 2"
+  },
+  {
+   "src": "poem-03",
+   "w": 1800,
+   "h": 1013,
+   "alt": "The Poem of Future — 3"
+  },
+  {
+   "src": "poem-04",
+   "w": 1800,
+   "h": 1013,
+   "alt": "The Poem of Future — 4"
+  }
+ ],
+ "kmoryu": [
+  {
+   "src": "kmoryu-01",
+   "w": 1440,
+   "h": 810,
+   "alt": "К МОРЮ — 1"
+  },
+  {
+   "src": "kmoryu-02",
+   "w": 1440,
+   "h": 810,
+   "alt": "К МОРЮ — 2"
+  },
+  {
+   "src": "kmoryu-03",
+   "w": 1440,
+   "h": 810,
+   "alt": "К МОРЮ — 3"
+  },
+  {
+   "src": "kmoryu-04",
+   "w": 1440,
+   "h": 810,
+   "alt": "К МОРЮ — 4"
+  }
+ ],
+ "boylston": [
+  {
+   "src": "boylston-01",
+   "w": 1174,
+   "h": 784,
+   "alt": "Boylston Film Festival — 1"
+  },
+  {
+   "src": "boylston-02",
+   "w": 1273,
+   "h": 1800,
+   "alt": "Boylston Film Festival — 2"
+  },
+  {
+   "src": "boylston-03",
+   "w": 1442,
+   "h": 810,
+   "alt": "Boylston Film Festival — 3"
+  },
+  {
+   "src": "boylston-04",
+   "w": 1398,
+   "h": 1080,
+   "alt": "Boylston Film Festival — 4"
+  }
+ ],
+ "vivid": [
+  {
+   "src": "vivid-01",
+   "w": 1800,
+   "h": 1200,
+   "alt": "Vivid Dream — 1"
+  },
+  {
+   "src": "vivid-02",
+   "w": 1800,
+   "h": 1200,
+   "alt": "Vivid Dream — 2"
+  },
+  {
+   "src": "vivid-03",
+   "w": 1800,
+   "h": 1200,
+   "alt": "Vivid Dream — 3"
+  },
+  {
+   "src": "vivid-04",
+   "w": 1800,
+   "h": 1200,
+   "alt": "Vivid Dream — 4"
+  },
+  {
+   "src": "vivid-05",
+   "w": 1800,
+   "h": 1200,
+   "alt": "Vivid Dream — 5"
+  },
+  {
+   "src": "vivid-06",
+   "w": 1800,
+   "h": 1350,
+   "alt": "Vivid Dream — 6"
+  },
+  {
+   "src": "vivid-07",
+   "w": 1280,
+   "h": 960,
+   "alt": "Vivid Dream — 7"
+  }
+ ],
+ "feel": [
+  {
+   "src": "feel-01",
+   "w": 1800,
+   "h": 1201,
+   "alt": "Do You Feel It — 1"
+  },
+  {
+   "src": "feel-02",
+   "w": 640,
+   "h": 427,
+   "alt": "Do You Feel It — 2"
+  },
+  {
+   "src": "feel-03",
+   "w": 392,
+   "h": 523,
+   "alt": "Do You Feel It — 3"
+  },
+  {
+   "src": "feel-04",
+   "w": 427,
+   "h": 640,
+   "alt": "Do You Feel It — 4"
+  },
+  {
+   "src": "feel-05",
+   "w": 495,
+   "h": 640,
+   "alt": "Do You Feel It — 5"
+  },
+  {
+   "src": "feel-06",
+   "w": 640,
+   "h": 427,
+   "alt": "Do You Feel It — 6"
+  },
+  {
+   "src": "feel-07",
+   "w": 340,
+   "h": 227,
+   "alt": "Do You Feel It — 7"
+  }
+ ],
+ "installwide": [
+  {
+   "src": "installwide-01",
+   "w": 1800,
+   "h": 1200,
+   "alt": "Do You Feel It, installation view — 1"
+  }
+ ],
+ "bostonl": [
+  {
+   "src": "bostonl-01",
+   "w": 1800,
+   "h": 1200,
+   "alt": "Boston — 1"
+  },
+  {
+   "src": "bostonl-02",
+   "w": 1200,
+   "h": 1800,
+   "alt": "Boston — 2"
+  },
+  {
+   "src": "bostonl-03",
+   "w": 1200,
+   "h": 1800,
+   "alt": "Boston — 3"
+  },
+  {
+   "src": "bostonl-04",
+   "w": 1800,
+   "h": 1200,
+   "alt": "Boston — 4"
+  },
+  {
+   "src": "bostonl-05",
+   "w": 1800,
+   "h": 1200,
+   "alt": "Boston — 5"
+  },
+  {
+   "src": "bostonl-06",
+   "w": 1200,
+   "h": 1800,
+   "alt": "Boston — 6"
+  }
+ ],
+ "la": [
+  {
+   "src": "la-01",
+   "w": 1350,
+   "h": 1800,
+   "alt": "Los Angeles — 1"
+  },
+  {
+   "src": "la-02",
+   "w": 1350,
+   "h": 1800,
+   "alt": "Los Angeles — 2"
+  },
+  {
+   "src": "la-03",
+   "w": 1350,
+   "h": 1800,
+   "alt": "Los Angeles — 3"
+  },
+  {
+   "src": "la-04",
+   "w": 1440,
+   "h": 960,
+   "alt": "Los Angeles — 4"
+  },
+  {
+   "src": "la-05",
+   "w": 1440,
+   "h": 960,
+   "alt": "Los Angeles — 5"
+  },
+  {
+   "src": "la-06",
+   "w": 1350,
+   "h": 1800,
+   "alt": "Los Angeles — 6"
+  },
+  {
+   "src": "la-07",
+   "w": 1440,
+   "h": 960,
+   "alt": "Los Angeles — 7"
+  },
+  {
+   "src": "la-08",
+   "w": 1440,
+   "h": 960,
+   "alt": "Los Angeles — 8"
+  }
+ ],
+ "cities": [
+  {
+   "src": "cities-01",
+   "w": 1599,
+   "h": 1080,
+   "alt": "Cities — 1"
+  },
+  {
+   "src": "cities-02",
+   "w": 1738,
+   "h": 785,
+   "alt": "Cities — 2"
+  },
+  {
+   "src": "cities-03",
+   "w": 1440,
+   "h": 966,
+   "alt": "Cities — 3"
+  },
+  {
+   "src": "cities-04",
+   "w": 1440,
+   "h": 966,
+   "alt": "Cities — 4"
+  },
+  {
+   "src": "cities-05",
+   "w": 1800,
+   "h": 783,
+   "alt": "Cities — 5"
+  },
+  {
+   "src": "cities-06",
+   "w": 1599,
+   "h": 1080,
+   "alt": "Cities — 6"
+  },
+  {
+   "src": "cities-07",
+   "w": 1599,
+   "h": 1080,
+   "alt": "Cities — 7"
+  },
+  {
+   "src": "cities-08",
+   "w": 1599,
+   "h": 1080,
+   "alt": "Cities — 8"
+  }
+ ],
+ "chinatown": [
+  {
+   "src": "chinatown-01",
+   "w": 1080,
+   "h": 1080,
+   "alt": "Chinatown — 1"
+  },
+  {
+   "src": "chinatown-02",
+   "w": 1080,
+   "h": 1080,
+   "alt": "Chinatown — 2"
+  },
+  {
+   "src": "chinatown-03",
+   "w": 1175,
+   "h": 1175,
+   "alt": "Chinatown — 3"
+  },
+  {
+   "src": "chinatown-04",
+   "w": 1080,
+   "h": 1080,
+   "alt": "Chinatown — 4"
+  },
+  {
+   "src": "chinatown-05",
+   "w": 1080,
+   "h": 1080,
+   "alt": "Chinatown — 5"
+  }
+ ],
+ "event": [
+  {
+   "src": "event-01",
+   "w": 1800,
+   "h": 1200,
+   "alt": "Event photography — 1"
+  },
+  {
+   "src": "event-02",
+   "w": 1800,
+   "h": 1200,
+   "alt": "Event photography — 2"
+  },
+  {
+   "src": "event-03",
+   "w": 1200,
+   "h": 1800,
+   "alt": "Event photography — 3"
+  },
+  {
+   "src": "event-04",
+   "w": 1800,
+   "h": 1200,
+   "alt": "Event photography — 4"
+  },
+  {
+   "src": "event-05",
+   "w": 1800,
+   "h": 1200,
+   "alt": "Event photography — 5"
+  },
+  {
+   "src": "event-06",
+   "w": 1800,
+   "h": 1200,
+   "alt": "Event photography — 6"
+  },
+  {
+   "src": "event-07",
+   "w": 1800,
+   "h": 1200,
+   "alt": "Event photography — 7"
+  },
+  {
+   "src": "event-08",
+   "w": 1800,
+   "h": 1200,
+   "alt": "Event photography — 8"
+  },
+  {
+   "src": "event-09",
+   "w": 1800,
+   "h": 1200,
+   "alt": "Event photography — 9"
+  },
+  {
+   "src": "event-10",
+   "w": 1800,
+   "h": 1200,
+   "alt": "Event photography — 10"
+  },
+  {
+   "src": "event-11",
+   "w": 1800,
+   "h": 1200,
+   "alt": "Event photography — 11"
+  }
+ ],
+ "install": [
+  {
+   "src": "install-01",
+   "w": 1200,
+   "h": 1800,
+   "alt": "Do You Feel It, installation view — 1"
+  },
+  {
+   "src": "install-02",
+   "w": 1200,
+   "h": 1800,
+   "alt": "Do You Feel It, installation view — 2"
+  }
+ ],
+ "hero": [
+  {
+   "src": "hero",
+   "w": 2600,
+   "h": 1733,
+   "alt": "Seascape at dusk"
+  }
+ ],
+ "deck": {
+  "come-on-in": {
+   "src": "slide-come-on-in",
+   "w": 1800,
+   "h": 1013
+  },
+  "whispering-room": {
+   "src": "slide-whispering-room",
+   "w": 1800,
+   "h": 1013
+  },
+  "ann-arbor": {
+   "src": "slide-ann-arbor",
+   "w": 1800,
+   "h": 1013
+  },
+  "ruthless-rose": {
+   "src": "slide-ruthless-rose",
+   "w": 1800,
+   "h": 1013
+  },
+  "rainy-new-york": {
+   "src": "slide-rainy-new-york",
+   "w": 1800,
+   "h": 1013
+  },
+  "manchester": {
+   "src": "slide-manchester",
+   "w": 1800,
+   "h": 1013
+  },
+  "portraits": {
+   "src": "slide-portraits",
+   "w": 1800,
+   "h": 1013
+  },
+  "dream-sequence": {
+   "src": "slide-dream-sequence",
+   "w": 1800,
+   "h": 1013
+  },
+  "boston-fuji": {
+   "src": "slide-boston-fuji",
+   "w": 1800,
+   "h": 1013
+  },
+  "behind-the-scene": {
+   "src": "slide-behind-the-scene",
+   "w": 1800,
+   "h": 1013
+  }
+ }
+}

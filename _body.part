@@ -1,0 +1,761 @@
+<a class="skip" href="#about">Skip to content</a>
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- ============================================================
+     EDIT ME — every outbound link on the page is defined once,
+     right here. Change a value and it updates everywhere.
+     Anything left as "" hides itself instead of becoming a dead link.
+     ============================================================ -->
+<script>
+window.LINKS = {
+  email:     "mailto:caolepingdoris@gmail.com",
+  linkedin:  "https://www.linkedin.com/in/doris-cao-a68a1a33a",
+  instagram: "https://www.instagram.com/doris.cao.film/",
+  vimeo:     "",                       /* reel or channel — adds a Vimeo icon when set */
+  imdb:      "",
+  resume:    "",                       /* e.g. "assets/doris-cao-resume.pdf" */
+
+  /* Per-project watch links */
+  circle:         "",
+  levi:           "",
+  poem:           "",
+  kmoryu:         "",
+  vividDream:     "",
+  whisperingRoom: "",
+  comeOnIn:       "",
+  annArbor:       "",
+  roseGarden:     "",
+  unsolvedProblem:""
+};
+</script>
+
+<nav class="nav" aria-label="Sections">
+  <a class="mark" href="#top">Doris&nbsp;Cao</a>
+  <ul>
+    <li><a class="n" href="#about">About</a></li>
+    <li><a class="n" href="#director">Director</a></li>
+    <li><a class="n" href="#producer">Producer</a></li>
+    <li><a class="n" href="#gaffer">Gaffer</a></li>
+    <li><a class="n" href="#installation">Installation</a></li>
+    <li><a class="n" href="#photography">Photography</a></li>
+    <li><a class="n" href="#credits">Credits</a></li>
+    <li><a class="n" href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ============================================================
+     MASTHEAD
+     ============================================================ -->
+<header class="masthead" id="top">
+  <div class="plate">
+    <img src="assets/full/hero.jpg" alt="Long-exposure reflection of bare branches and a figure in a winter puddle" fetchpriority="high" width="2600" height="1733">
+  </div>
+  <div class="keylight" id="keylight" aria-hidden="true"></div>
+
+  <div class="over">
+    <h1 class="wordmark"><span class="b">Doris</span><span class="b">Cao</span></h1>
+    <ul class="roles">
+      <li><a href="#director">Director</a></li>
+      <li><a href="#producer">Producer</a></li>
+      <li><a href="#photography">Photography</a></li>
+      <li><a href="#gaffer">Gaffer</a></li>
+      <li><a href="#installation">Installation</a></li>
+    </ul>
+  </div>
+
+  <div class="scrollcue" aria-hidden="true"><span>Scroll</span><i></i></div>
+</header>
+
+<div class="masthead-foot">
+  <div class="socials">
+    <a data-link="linkedin" href="#" aria-label="LinkedIn" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.1 21 14.2V21h-4v-6c0-1.43-.03-3.27-2-3.27-2 0-2.3 1.56-2.3 3.17V21H9z"/></svg>
+    </a>
+    <a data-link="email" href="#" aria-label="Email">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v.3l-10 6-10-6zM2 8.1l9.5 5.7a1 1 0 0 0 1 0L22 8.1V18.5a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5z"/></svg>
+    </a>
+    <a data-link="instagram" href="#" aria-label="Instagram" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 1.8.25 2.2.42.6.22 1 .48 1.4.9.42.42.68.82.9 1.4.17.42.36 1.03.42 2.2.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.06 1.2-.25 1.8-.42 2.2-.22.6-.48 1-.9 1.4-.42.42-.82.68-1.4.9-.42.17-1.03.36-2.2.42-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.06-1.8-.25-2.2-.42-.6-.22-1-.48-1.4-.9-.42-.42-.68-.82-.9-1.4-.17-.42-.36-1.03-.42-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.06-1.2.25-1.8.42-2.2.22-.6.48-1 .9-1.4.42-.42.82-.68 1.4-.9.42-.17 1.03-.36 2.2-.42C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.14 0-3.5.01-4.74.07-1.14.05-1.76.24-2.17.4-.55.22-.94.47-1.35.88-.41.41-.66.8-.88 1.35-.16.41-.35 1.03-.4 2.17C2.4 10.1 2.4 10.46 2.4 12s0 1.9.06 3.14c.05 1.14.24 1.76.4 2.17.22.55.47.94.88 1.35.41.41.8.66 1.35.88.41.16 1.03.35 2.17.4 1.24.06 1.6.07 4.74.07s3.5-.01 4.74-.07c1.14-.05 1.76-.24 2.17-.4.55-.22.94-.47 1.35-.88.41-.41.66-.8.88-1.35.16-.41.35-1.03.4-2.17.06-1.24.07-1.6.07-3.14s-.01-1.9-.07-3.14c-.05-1.14-.24-1.76-.4-2.17a3.6 3.6 0 0 0-.88-1.35 3.6 3.6 0 0 0-1.35-.88c-.41-.16-1.03-.35-2.17-.4C15.5 4.01 15.14 4 12 4zm0 3.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8zm0 1.8a3.1 3.1 0 1 0 0 6.2 3.1 3.1 0 0 0 0-6.2zm5.1-3.2a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3z"/></svg>
+    </a>
+    <a data-link="vimeo" href="#" aria-label="Vimeo" target="_blank" rel="noopener" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 7.4c-.1 2.1-1.6 5-4.4 8.6-2.9 3.8-5.4 5.7-7.4 5.7-1.3 0-2.3-1.2-3.2-3.5L5.3 12c-.6-2.3-1.3-3.5-2-3.5-.15 0-.7.33-1.63.98L.7 8.23c1.02-.9 2.02-1.8 3-2.7 1.37-1.18 2.4-1.8 3.08-1.86 1.63-.16 2.63.95 3 3.32.4 2.56.68 4.15.84 4.78.47 2.13.98 3.2 1.54 3.2.43 0 1.08-.68 1.95-2.05.86-1.37 1.33-2.4 1.4-3.12.14-1.32-.37-1.98-1.53-1.98-.55 0-1.11.13-1.7.38 1.13-3.7 3.28-5.5 6.46-5.4 2.36.07 3.47 1.6 3.36 4.6z"/></svg>
+    </a>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ============================================================
+     01 — ABOUT
+     ============================================================ -->
+<section id="about" class="wrap">
+  <div class="head rise">
+    <div class="marker"><span class="no">01</span><span class="nm">About the artist</span></div>
+  </div>
+
+  <div class="about-grid">
+    <h2 class="pull rise" style="margin:0">A multimedia artist and producer dedicated to the space where <span>art, technology, and cultural storytelling</span> meet.</h2>
+
+    <div class="prose rise">
+      <p>Doris (Leping) Cao is a Boston-based filmmaker, photographer, and multimedia artist whose work probes the nuanced undercurrents of gender equality and diversity within everyday life. She holds a Bachelor’s degree from Emerson College’s School of Film, with a background in international film and art.</p>
+      <p>Doris seamlessly bridges tactile 16mm analog filmmaking and traditional darkroom processes with digital media and spatial design. For her, the photographic frame is never a final destination but a point of departure: her installations extend visual media, liberating moving and still imagery from the constraints of the frame to cultivate experiential environments where audience and narrative converge.</p>
+      <p>As a filmmaker, Doris is deeply interested in spectatorship and this awareness guides her approach to storytelling. For her, filmmaking is a bridge between individuals and communities; her goal as a director is to amplify diverse voices and create stories that resonate across boundaries. At the core of her artistic practice are questions of visibility, power, and emotional inheritance within contemporary society. She is particularly drawn to stories centered on marginalized and underrepresented voices, especially focus on feminism and the complexities of human connection in modern life.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ============================================================
+     02 — DIRECTOR
+     ============================================================ -->
+<section id="director" class="wrap">
+  <div class="head rise">
+    <div class="marker"><span class="no">02</span><span class="nm">Director</span></div>
+  </div>
+
+  <div class="projects">
+
+    <article class="project rise" data-gallery="levi">
+      <div class="pj-media">
+        <div class="pj-strip pj-strip-3" style="margin:0">
+<!--GRID:levi-->
+        </div>
+      </div>
+      <div class="pj-text">
+        <p class="pj-index">01 / 03</p>
+        <div class="pj-kicker"><p class="label">2025</p></div>
+        <h3 class="pj-title">Levi By The Sea</h3>
+        <ul class="pj-meta">
+          <li><span>Role</span><span>Written &amp; directed</span></li>
+        </ul>
+        <a class="watch" data-link="levi" href="#" hidden>Watch</a>
+      </div>
+    </article>
+
+    <article class="project flip rise" data-gallery="unsolved">
+      <div class="pj-media">
+        <div class="pj-strip pj-strip-2" style="margin:0">
+<!--GRID:unsolved-->
+        </div>
+      </div>
+      <div class="pj-text">
+        <p class="pj-index">02 / 03</p>
+        <div class="pj-kicker"><p class="label">2026</p></div>
+        <h3 class="pj-title">Unsolved Problem</h3>
+        <ul class="pj-meta">
+          <li><span>Role</span><span>Director · Writer · Producer</span></li>
+          <li><span>Note</span><span>Emerson capstone thesis</span></li>
+        </ul>
+        <a class="watch" data-link="unsolvedProblem" href="#" hidden>Watch</a>
+      </div>
+    </article>
+
+    <article class="project rise" data-gallery="circle">
+      <div class="pj-media">
+        <div class="pj-strip pj-strip-sq" style="margin:0">
+<!--GRID:circle-->
+        </div>
+      </div>
+      <div class="pj-text">
+        <p class="pj-index">03 / 03</p>
+        <div class="pj-kicker"><p class="label">2025</p></div>
+        <h3 class="pj-title">How Can I<br>Become A Circle</h3>
+        <ul class="pj-meta">
+          <li><span>Role</span><span>Written &amp; directed</span></li>
+          <li><span>Format</span><span>16mm B&amp;W</span></li>
+        </ul>
+        <a class="watch" data-link="circle" href="#" hidden>Watch</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ============================================================
+     03 — PRODUCER
+     ============================================================ -->
+<section id="producer" class="wrap">
+  <div class="head rise">
+    <div class="marker"><span class="no">03</span><span class="nm">Producer</span></div>
+  </div>
+
+  <div class="projects">
+
+    <article class="project rise" data-gallery="poem">
+      <div class="pj-media">
+        <div class="pj-strip pj-strip-2" style="margin:0">
+<!--GRID:poem-->
+        </div>
+      </div>
+      <div class="pj-text">
+        <p class="pj-index">01 / 03</p>
+        <div class="pj-kicker"><p class="label">2026</p></div>
+        <h3 class="pj-title">The Poem of Future</h3>
+        <ul class="pj-meta">
+          <li><span>Role</span><span>Producer</span></li>
+          <li><span>Director</span><span>Ling Shi</span></li>
+        </ul>
+        <a class="watch" data-link="poem" href="#" hidden>Watch</a>
+      </div>
+    </article>
+
+    <article class="project flip rise" data-gallery="kmoryu">
+      <div class="pj-media">
+        <div class="pj-strip pj-strip-2" style="margin:0">
+<!--GRID:kmoryu-->
+        </div>
+      </div>
+      <div class="pj-text">
+        <p class="pj-index">02 / 03</p>
+        <div class="pj-kicker"><p class="label">2025</p></div>
+        <h3 class="pj-title">К МОРЮ</h3>
+        <ul class="pj-meta">
+          <li><span>Role</span><span>Producer</span></li>
+          <li><span>Director</span><span>Oto Wang</span></li>
+        </ul>
+        <a class="watch" data-link="kmoryu" href="#" hidden>Watch</a>
+      </div>
+    </article>
+
+    <article class="project rise" data-gallery="boylston">
+      <div class="pj-media">
+        <div class="pj-strip pj-strip-2" style="margin:0">
+<!--GRID:boylston-->
+        </div>
+      </div>
+      <div class="pj-text">
+        <p class="pj-index">03 / 03</p>
+        <div class="pj-kicker"><p class="label">2025</p></div>
+        <h3 class="pj-title">Boylston Film Festival</h3>
+        <ul class="pj-meta">
+          <li><span>Role</span><span>Film curator · organiser</span></li>
+          <li><span>Where</span><span>Emerson College · Boston University</span></li>
+        </ul>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ============================================================
+     04 — GAFFER
+     ============================================================ -->
+<section id="gaffer" class="wrap">
+  <div class="head rise">
+    <div class="marker"><span class="no">04</span><span class="nm">Gaffer</span></div>
+  </div>
+
+  <div class="projects">
+
+    <article class="project rise">
+      <div class="pj-media">
+        <img loading="lazy" src="assets/full/slide-whispering-room.jpg" alt="Whispering Room — a figure behind projected scrims" width="1800" height="1013">
+      </div>
+      <div class="pj-text">
+        <p class="pj-index">01 / 03</p>
+        <div class="pj-kicker"><p class="label">2025</p></div>
+        <h3 class="pj-title">Whispering Room</h3>
+        <ul class="pj-meta">
+          <li><span>Role</span><span>Gaffer</span></li>
+          <li><span>Director</span><span>Amber Yang</span></li>
+          <li><span>Format</span><span>New media project</span></li>
+        </ul>
+        <a class="watch" data-link="whisperingRoom" href="#" hidden>Watch</a>
+      </div>
+    </article>
+
+    <article class="project flip rise">
+      <div class="pj-media">
+        <img loading="lazy" src="assets/full/slide-ann-arbor.jpg" alt="Ann Arbor — night exteriors and warm interiors" width="1800" height="1013">
+      </div>
+      <div class="pj-text">
+        <p class="pj-index">02 / 03</p>
+        <div class="pj-kicker"><p class="label">2025</p></div>
+        <h3 class="pj-title">Ann Arbor</h3>
+        <ul class="pj-meta">
+          <li><span>Role</span><span>Key grip · G&amp;E</span></li>
+          <li><span>Director</span><span>James Wang</span></li>
+        </ul>
+        <a class="watch" data-link="annArbor" href="#" hidden>Watch</a>
+      </div>
+    </article>
+
+    <article class="project rise">
+      <div class="pj-media">
+        <img loading="lazy" src="assets/full/slide-come-on-in.jpg" alt="Come On In — night exterior and barn interior frames" width="1800" height="1013">
+      </div>
+      <div class="pj-text">
+        <p class="pj-index">03 / 03</p>
+        <div class="pj-kicker"><p class="label">2024</p></div>
+        <h3 class="pj-title">Come On In</h3>
+        <ul class="pj-meta">
+          <li><span>Role</span><span>Gaffer</span></li>
+          <li><span>Directors</span><span>Ethan Kroes &amp; Alex Colocousis</span></li>
+        </ul>
+        <a class="watch" data-link="comeOnIn" href="#" hidden>Watch</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ============================================================
+     05 — INSTALLATION
+     ============================================================ -->
+<section id="installation" class="wrap">
+  <div class="head rise">
+    <div class="marker"><span class="no">05</span><span class="nm">Installation &amp; new media</span></div>
+  </div>
+
+  <!-- ---- Vivid Dream ---- -->
+  <div class="series rise">
+    <div class="series-head">
+      <h3>Vivid Dream</h3>
+      <span class="gear">16mm film · digital video · mixed-media moving image installation</span>
+    </div>
+    <div class="carousel" data-gallery="vivid">
+      <div class="car-track">
+<!--GRID:vivid-->
+      </div>
+      <div class="car-bar">
+        <button class="car-prev" type="button" aria-label="Previous frames">‹</button>
+        <button class="car-next" type="button" aria-label="Next frames">›</button>
+        <div class="rail" aria-hidden="true"><i></i></div>
+        <span class="count"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ---- Do You Feel It ---- -->
+  <div class="series rise">
+    <div class="series-head">
+      <h3>Do You Feel It</h3>
+      <span class="gear">Archival pigment prints · cyanotype · Second Natural Photo Exhibition, 2026</span>
+    </div>
+    <div class="carousel" data-gallery="feel">
+      <div class="car-track">
+<!--GRID:feel-->
+      </div>
+      <div class="car-bar">
+        <button class="car-prev" type="button" aria-label="Previous frames">‹</button>
+        <button class="car-next" type="button" aria-label="Next frames">›</button>
+        <div class="rail" aria-hidden="true"><i></i></div>
+        <span class="count"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ---- installation views ---- -->
+  <div class="series rise">
+    <div class="series-head">
+      <h3>Installation views</h3>
+      <span class="gear">Archival pigment prints 11×15, 22×30, 24×36 in · cyanotype 5×7 in</span>
+    </div>
+    <div data-gallery="install">
+      <div class="grid" style="columns:1">
+<!--GRID:installwide-->
+      </div>
+      <div class="grid wide" style="margin-top:12px">
+<!--GRID:install-->
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ============================================================
+     06 — PHOTOGRAPHY
+     ============================================================ -->
+<section id="photography" class="wrap">
+  <div class="head rise">
+    <div class="marker"><span class="no">06</span><span class="nm">Photography</span></div>
+    <h2 class="section-title">Contact sheet.</h2>
+  </div>
+
+  <div class="series-nav">
+    <div class="filters" style="margin:0">
+      <a class="chip" href="#s-rainy">A Rainy Day In New York</a>
+      <a class="chip" href="#s-manchester">Manchester By The Sea</a>
+      <a class="chip" href="#s-portraits">Portraits</a>
+      <a class="chip" href="#s-dream">Dream Sequence</a>
+      <a class="chip" href="#s-cities">Cities</a>
+      <a class="chip" href="#s-chinatown">Chinatown</a>
+      <a class="chip" href="#s-event">Event</a>
+      <a class="chip" href="#s-bts">Behind The Scene</a>
+    </div>
+  </div>
+
+  <div class="series rise" id="s-rainy">
+    <div class="plate" data-gallery="p-rainy">
+      <button class="cell" data-cap="A Rainy Day In New York" type="button">
+        <img loading="lazy" decoding="async" src="assets/thumb/slide-rainy-new-york.jpg" alt="A Rainy Day In New York" width="760" height="428">
+      </button>
+    </div>
+  </div>
+
+  <div class="series rise" id="s-manchester">
+    <div class="plate" data-gallery="p-manchester">
+      <button class="cell" data-cap="Manchester By The Sea" type="button">
+        <img loading="lazy" decoding="async" src="assets/thumb/slide-manchester.jpg" alt="Manchester By The Sea" width="760" height="428">
+      </button>
+    </div>
+  </div>
+
+  <div class="series rise" id="s-portraits">
+    <div class="plate" data-gallery="p-portraits">
+      <button class="cell" data-cap="Portraits" type="button">
+        <img loading="lazy" decoding="async" src="assets/thumb/slide-portraits.jpg" alt="Portraits" width="760" height="428">
+      </button>
+    </div>
+  </div>
+
+  <div class="series rise" id="s-dream">
+    <div class="plate" data-gallery="p-dream">
+      <button class="cell" data-cap="Dream Sequence" type="button">
+        <img loading="lazy" decoding="async" src="assets/thumb/slide-dream-sequence.jpg" alt="Dream Sequence" width="760" height="428">
+      </button>
+    </div>
+  </div>
+
+  <div class="series rise" id="s-cities">
+    <div class="series-head"><h3>Cities</h3></div>
+
+    <div class="series-sub">
+      <h4>Guangzhou · Changsha · Beijing</h4>
+      <span class="gear">Ricoh XR7 · Kodak 5207</span>
+    </div>
+    <div class="grid" data-gallery="cities">
+<!--GRID:cities-->
+    </div>
+
+    <div class="series-sub">
+      <h4>Los Angeles</h4>
+      <span class="gear">iPhone 17 Pro</span>
+    </div>
+    <div class="grid" data-gallery="la">
+<!--GRID:la-->
+    </div>
+
+    <div class="plate" data-gallery="p-boston">
+      <button class="cell" data-cap="Boston — Fuji GFX 50R" type="button">
+        <img loading="lazy" decoding="async" src="assets/thumb/slide-boston-fuji.jpg" alt="Boston — Fuji GFX 50R" width="760" height="428">
+      </button>
+    </div>
+    <div class="series-sub" style="padding-top:1rem">
+      <h4>Boston</h4>
+      <span class="gear">Lumix S5M2</span>
+    </div>
+    <div class="grid" data-gallery="bostonl">
+<!--GRID:bostonl-->
+    </div>
+  </div>
+
+  <div class="series rise" id="s-chinatown">
+    <div class="series-head"><h3>Chinatown</h3><span class="gear">Hasselblad · Ilford HP5</span></div>
+    <div class="grid" data-gallery="chinatown">
+<!--GRID:chinatown-->
+    </div>
+  </div>
+
+  <div class="series rise" id="s-event">
+    <div class="series-head"><h3>Event photography</h3><span class="gear">Lumix S5M2</span></div>
+    <div class="grid" data-gallery="event">
+<!--GRID:event-->
+    </div>
+  </div>
+
+  <div class="series rise" id="s-bts">
+    <div class="plate" data-gallery="p-bts">
+      <button class="cell" data-cap="Behind The Scene" type="button">
+        <img loading="lazy" decoding="async" src="assets/thumb/slide-behind-the-scene.jpg" alt="Behind The Scene" width="760" height="428">
+      </button>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ============================================================
+     07 — CREDITS
+     ============================================================ -->
+<section id="credits" class="wrap">
+  <div class="head rise">
+    <div class="marker"><span class="no">07</span><span class="nm">Selected credits</span></div>
+    <h2 class="section-title">The crew list.</h2>
+  </div>
+
+  <div class="filters" role="group" aria-label="Filter credits by department">
+    <button class="chip" data-dept="all" aria-pressed="true">All<span class="n" data-deptcount="all"></span></button>
+    <button class="chip" data-dept="Director" aria-pressed="false">Director<span class="n" data-deptcount="Director"></span></button>
+    <button class="chip" data-dept="Producer" aria-pressed="false">Producer<span class="n" data-deptcount="Producer"></span></button>
+    <button class="chip" data-dept="Gaffer" aria-pressed="false">Gaffer<span class="n" data-deptcount="Gaffer"></span></button>
+    <button class="chip" data-dept="Camera" aria-pressed="false">Camera<span class="n" data-deptcount="Camera"></span></button>
+    <button class="chip" data-dept="G&amp;E" aria-pressed="false">G&amp;E<span class="n" data-deptcount="G&amp;E"></span></button>
+  </div>
+
+  <div class="credits" id="credit-list">
+
+    <div class="credit" data-dept="Director"><span class="yr">2026</span><span class="ti">Unsolved Problem<em>Emerson capstone thesis</em></span><span class="ro">Director · Writer · Producer</span><span class="di">Boston MA</span></div>
+    <div class="credit" data-dept="Director"><span class="yr">2025</span><span class="ti">How Can I Become A Circle<em>Awarded experimental short · 16mm B&amp;W</em></span><span class="ro">Director · Writer</span><span class="di">Boston MA</span></div>
+    <div class="credit" data-dept="Director"><span class="yr">2025</span><span class="ti">Levi By The Sea<em>Awarded independent short</em></span><span class="ro">Director · Writer</span><span class="di">Boston MA</span></div>
+    <div class="credit" data-dept="Director"><span class="yr">2025</span><span class="ti">Desire Under Our Uniform<em>Minishorts vertical series</em></span><span class="ro">1st AD</span><span class="di">Boston MA</span></div>
+    <div class="credit" data-dept="Director"><span class="yr">2024</span><span class="ti">Life Back Again<em>Experimental short</em></span><span class="ro">Co-director</span><span class="di">Beijing, China</span></div>
+
+    <div class="credit" data-dept="Producer"><span class="yr">2026</span><span class="ti">Unsolved Problem<em>Emerson capstone thesis</em></span><span class="ro">Producer</span><span class="di">Boston MA</span></div>
+    <div class="credit" data-dept="Producer"><span class="yr">2026</span><span class="ti">The Poem of Future<em>Independent film</em></span><span class="ro">Producer</span><span class="di">dir. Ling Shi</span></div>
+    <div class="credit" data-dept="Producer"><span class="yr">2025</span><span class="ti">К МОРЮ<em>Independent film</em></span><span class="ro">Producer</span><span class="di">dir. Oto Wang</span></div>
+    <div class="credit" data-dept="Producer"><span class="yr">2025</span><span class="ti">June 31<sup>st</sup></span><span class="ro">Producer</span><span class="di">dir. Ling Shi</span></div>
+    <div class="credit" data-dept="Producer"><span class="yr">2024</span><span class="ti">18th First Film Festival — <em style="display:inline;font-family:inherit;font-size:inherit;text-transform:none;letter-spacing:0;color:inherit">“Training Camp”</em></span><span class="ro">Production assistant</span><span class="di">XiNing, China</span></div>
+
+    <div class="credit" data-dept="Gaffer"><span class="yr">2025</span><span class="ti">Whispering Room<em>New media project</em></span><span class="ro">Gaffer</span><span class="di">dir. Amber Yang</span></div>
+    <div class="credit" data-dept="Gaffer"><span class="yr">2024</span><span class="ti">The Rose Garden</span><span class="ro">Gaffer</span><span class="di">dir. Katherine Langdry</span></div>
+    <div class="credit" data-dept="Gaffer"><span class="yr">2024</span><span class="ti">Ruthless</span><span class="ro">Gaffer</span><span class="di">Boston MA</span></div>
+    <div class="credit" data-dept="Gaffer"><span class="yr">2024</span><span class="ti">Shameless</span><span class="ro">Gaffer</span><span class="di">dir. Zixuan Wang</span></div>
+    <div class="credit" data-dept="Gaffer"><span class="yr">2024</span><span class="ti">Come On In</span><span class="ro">Gaffer</span><span class="di">dir. Ethan Kroes &amp; Alex Colocousis</span></div>
+    <div class="credit" data-dept="Gaffer"><span class="yr">2023</span><span class="ti">Jetty Understanding</span><span class="ro">Gaffer</span><span class="di">dir. Amber Yang</span></div>
+
+    <div class="credit" data-dept="Camera"><span class="yr">2024</span><span class="ti">The Fool</span><span class="ro">2nd AC</span><span class="di">dir. Ling Shi</span></div>
+    <div class="credit" data-dept="Camera"><span class="yr">2023</span><span class="ti">Take A Photo<em>Music video</em></span><span class="ro">Camera op</span><span class="di">dir. Calvino Philips</span></div>
+    <div class="credit" data-dept="Camera"><span class="yr">2023</span><span class="ti">Winter Mail</span><span class="ro">Camera op</span><span class="di">dir. Yiduo Wang</span></div>
+    <div class="credit" data-dept="Camera"><span class="yr">2023</span><span class="ti">Emerson EUDT promo</span><span class="ro">DoP</span><span class="di">Boston MA</span></div>
+    <div class="credit" data-dept="Camera"><span class="yr">2023</span><span class="ti">Grim Reefer</span><span class="ro">Camera op · 1st AC</span><span class="di">dir. Calvino Philips</span></div>
+
+    <div class="credit" data-dept="G&amp;E"><span class="yr">2025</span><span class="ti">We Are Privilege Few</span><span class="ro">G&amp;E</span><span class="di">dir. Albina Aliyeva</span></div>
+    <div class="credit" data-dept="G&amp;E"><span class="yr">2025</span><span class="ti">Ann Arbor</span><span class="ro">Key grip</span><span class="di">dir. James Wang</span></div>
+    <div class="credit" data-dept="G&amp;E"><span class="yr">2025</span><span class="ti">1H22M</span><span class="ro">G&amp;E</span><span class="di">dir. Yangbo Liu</span></div>
+    <div class="credit" data-dept="G&amp;E"><span class="yr">2024</span><span class="ti">Forbidden Fruit</span><span class="ro">G&amp;E</span><span class="di">dir. Jieyi Zhang</span></div>
+    <div class="credit" data-dept="G&amp;E"><span class="yr">2023</span><span class="ti">Delivery</span><span class="ro">G&amp;E</span><span class="di">dir. Zhuoheng Wang</span></div>
+
+  </div>
+
+  <div class="cred-pager" id="cred-pager">
+    <button class="cred-prev" type="button" aria-label="Previous page">‹</button>
+    <span class="cred-page"></span>
+    <button class="cred-next" type="button" aria-label="Next page">›</button>
+  </div>
+
+  <p style="margin:1.8rem 0 clamp(3rem,7vw,6rem)"><a class="big-link" data-link="resume" href="#" style="font-size:clamp(1rem,2vw,1.3rem)" hidden>Download the full résumé (PDF) →</a></p>
+</section>
+
+<!-- ============================================================
+     08 — CONTACT
+     ============================================================ -->
+<section id="contact" class="wrap contact">
+  <div class="marker" style="display:flex;align-items:center;gap:1rem;padding-bottom:.9rem;border-bottom:1px solid var(--line-soft)">
+    <span class="no" style="font-family:var(--f-mono);font-size:.68rem;letter-spacing:.2em;color:var(--lamp)">08</span>
+    <span class="nm" style="font-family:var(--f-mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)">Contact</span>
+  </div>
+  <h2 class="section-title" style="margin-bottom:2rem">Bring me a script,<br>or a room to light.</h2>
+
+  <p style="margin:0"><a class="big-link" data-link="email" data-fill="email" href="#" style="font-size:clamp(1.05rem,2.2vw,1.5rem)">caolepingdoris@gmail.com</a></p>
+
+</section>
+</main>
+
+<footer>
+  <p class="label">© <span id="yr"></span> Doris (Leping) Cao</p>
+</footer>
+
+<!-- ============================================================
+     LIGHTBOX
+     ============================================================ -->
+<figure class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="x"    type="button" aria-label="Close">✕</button>
+  <button class="prev" type="button" aria-label="Previous">‹</button>
+  <button class="next" type="button" aria-label="Next">›</button>
+  <img alt="">
+  <figcaption></figcaption>
+</figure>
+
+<script>
+(() => {
+  "use strict";
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---- 1. apply LINKS, hide anything left empty ---------------- */
+  document.querySelectorAll("[data-link]").forEach(el => {
+    const url = (window.LINKS || {})[el.dataset.link] || "";
+    if (!url) { el.hidden = true; el.removeAttribute("href"); return; }
+    el.hidden = false;
+    el.href = url;
+    if (el.dataset.fill === "email") el.textContent = url.replace(/^mailto:/, "");
+  });
+
+  document.getElementById("yr").textContent = new Date().getFullYear();
+
+  /* ---- 2. scroll progress -------------------------------------- */
+  const bar = document.getElementById("progress");
+  let ticking = false;
+  const drawBar = () => {
+    const h = document.documentElement.scrollHeight - innerHeight;
+    bar.style.transform = `scaleX(${h > 0 ? scrollY / h : 0})`;
+    ticking = false;
+  };
+  addEventListener("scroll", () => {
+    if (!ticking) { ticking = true; requestAnimationFrame(drawBar); }
+  }, { passive: true });
+  drawBar();
+
+  /* ---- 3. masthead key light follows the pointer --------------- */
+  const mast = document.getElementById("top");
+  const key  = document.getElementById("keylight");
+  if (mast && key && !reduced && matchMedia("(pointer: fine)").matches) {
+    mast.addEventListener("pointermove", e => {
+      const r = mast.getBoundingClientRect();
+      key.style.setProperty("--lx", ((e.clientX - r.left) / r.width  * 100) + "%");
+      key.style.setProperty("--ly", ((e.clientY - r.top)  / r.height * 100) + "%");
+    });
+  }
+
+  /* ---- 4. carousels -------------------------------------------- */
+  document.querySelectorAll(".carousel").forEach(car => {
+    const track = car.querySelector(".car-track");
+    const prev  = car.querySelector(".car-prev");
+    const next  = car.querySelector(".car-next");
+    const fill  = car.querySelector(".rail i");
+    const count = car.querySelector(".count");
+    const total = track.children.length;
+
+    const page = () => {
+      // one page = however many whole frames are on screen right now
+      const w = track.children[0].getBoundingClientRect().width + 12;
+      return Math.max(1, Math.round(track.clientWidth / w));
+    };
+    const sync = () => {
+      const max = track.scrollWidth - track.clientWidth;
+      const per = page();
+      const at  = max <= 1 ? 0 : track.scrollLeft / max;
+      fill.style.transform = `scaleX(${max <= 1 ? 1 : Math.max(per / total, at * (1 - per / total) + per / total)})`;
+      prev.disabled = track.scrollLeft <= 2;
+      next.disabled = track.scrollLeft >= max - 2;
+      const first = Math.round(at * (total - per)) + 1;
+      count.textContent = max <= 1
+        ? String(total).padStart(2, "0")
+        : `${String(first).padStart(2, "0")}–${String(Math.min(first + per - 1, total)).padStart(2, "0")} / ${String(total).padStart(2, "0")}`;
+    };
+    const go = d => {
+      const w = track.children[0].getBoundingClientRect().width + 12;
+      track.scrollBy({ left: d * w * page(), behavior: reduced ? "auto" : "smooth" });
+    };
+    prev.addEventListener("click", () => go(-1));
+    next.addEventListener("click", () => go(1));
+    track.addEventListener("scroll", () => requestAnimationFrame(sync), { passive: true });
+    addEventListener("resize", sync);
+    sync();
+  });
+
+  /* ---- 5. credits filter + pagination ---------------------------- */
+  const credits = [...document.querySelectorAll("#credit-list .credit")];
+  const dcounts = { all: credits.length };
+  credits.forEach(c => { dcounts[c.dataset.dept] = (dcounts[c.dataset.dept] || 0) + 1; });
+  document.querySelectorAll("[data-deptcount]").forEach(n => {
+    n.textContent = String(dcounts[n.dataset.deptcount] || 0).padStart(2, "0");
+  });
+
+  const PAGE_SIZE = 6;
+  const pager = document.getElementById("cred-pager");
+  const pPrev = pager.querySelector(".cred-prev");
+  const pNext = pager.querySelector(".cred-next");
+  const pLbl  = pager.querySelector(".cred-page");
+  let dept = "all", page = 0;
+
+  function renderCredits() {
+    const shown = credits.filter(c => dept === "all" || c.dataset.dept === dept);
+    const pages = Math.max(1, Math.ceil(shown.length / PAGE_SIZE));
+    page = Math.min(page, pages - 1);
+    credits.forEach(c => { c.hidden = true; });
+    shown.slice(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE).forEach(c => { c.hidden = false; });
+    pLbl.textContent = `${String(page + 1).padStart(2, "0")} / ${String(pages).padStart(2, "0")}`;
+    pPrev.disabled = page === 0;
+    pNext.disabled = page >= pages - 1;
+    pager.hidden = pages <= 1;
+  }
+  pPrev.addEventListener("click", () => { page--; renderCredits(); });
+  pNext.addEventListener("click", () => { page++; renderCredits(); });
+
+  document.querySelectorAll(".chip[data-dept]").forEach(btn =>
+    btn.addEventListener("click", () => {
+      dept = btn.dataset.dept;
+      page = 0;
+      document.querySelectorAll(".chip[data-dept]").forEach(b =>
+        b.setAttribute("aria-pressed", String(b === btn)));
+      renderCredits();
+    }));
+  renderCredits();
+
+  /* ---- 6. lightbox --------------------------------------------- */
+  const lb   = document.getElementById("lb");
+  const lbIm = lb.querySelector("img");
+  const lbCp = lb.querySelector("figcaption");
+  let list = [], idx = 0, opener = null;
+
+  function paint() {
+    const cell = list[idx];
+    const img  = cell.querySelector("img");
+    lbIm.src = img.src.replace("/thumb/", "/full/");
+    lbIm.alt = img.alt;
+    lbCp.textContent = list.length > 1
+      ? `${cell.dataset.cap || img.alt}  ·  ${idx + 1} / ${list.length}`
+      : (cell.dataset.cap || img.alt);
+  }
+  function open(cell) {
+    list = [...cell.closest("[data-gallery]").querySelectorAll(".cell")].filter(c => !c.hidden);
+    idx  = list.indexOf(cell);
+    opener = cell;
+    lb.classList.add("on");
+    document.body.style.overflow = "hidden";
+    lb.querySelector(".prev").hidden = lb.querySelector(".next").hidden = list.length < 2;
+    paint();
+    lb.querySelector(".x").focus();
+  }
+  function close() {
+    lb.classList.remove("on");
+    document.body.style.overflow = "";
+    if (opener) opener.focus();
+  }
+  const step = d => { idx = (idx + d + list.length) % list.length; paint(); };
+
+  document.querySelectorAll("[data-gallery]").forEach(g =>
+    g.addEventListener("click", e => {
+      const cell = e.target.closest(".cell");
+      if (cell) open(cell);
+    }));
+  lb.querySelector(".x").addEventListener("click", close);
+  lb.querySelector(".prev").addEventListener("click", () => step(-1));
+  lb.querySelector(".next").addEventListener("click", () => step(1));
+  lb.addEventListener("click", e => { if (e.target === lb || e.target === lbIm) close(); });
+  addEventListener("keydown", e => {
+    if (!lb.classList.contains("on")) return;
+    if (e.key === "Escape")     close();
+    if (e.key === "ArrowLeft")  step(-1);
+    if (e.key === "ArrowRight") step(1);
+  });
+
+  /* ---- 7. reveal on scroll & nav highlight --------------------- */
+  if (!reduced && "IntersectionObserver" in window) {
+    const io = new IntersectionObserver((es, o) => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); o.unobserve(e.target); }
+    }), { rootMargin: "0px 0px -8% 0px" });
+    document.querySelectorAll(".rise").forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll(".rise").forEach(el => el.classList.add("in"));
+  }
+
+  const navLinks = [...document.querySelectorAll(".nav a.n")];
+  const spy = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    navLinks.forEach(a =>
+      a.setAttribute("aria-current", String(a.getAttribute("href") === "#" + e.target.id)));
+  }), { rootMargin: "-45% 0px -50% 0px" });
+  document.querySelectorAll("main section[id]").forEach(s => spy.observe(s));
+})();
+</script>
